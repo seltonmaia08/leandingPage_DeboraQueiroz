@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-padding-top: 3rem;
 }
 
 body {
@@ -40,8 +41,6 @@ header {
 header img {
     width: 20rem;
     height: auto;
-    margin: 0;
-    padding: 0;
 }
 
 header nav {
@@ -51,8 +50,12 @@ header nav {
 }
 
 header nav a {
-    text-decoration: none;
     color: #ffffff;
+}
+
+header nav a:hover {
+    border-bottom: 0.3rem solid var(--bg-secondary);
+    padding: 0.3rem;
 }
 
 footer {
@@ -117,7 +120,7 @@ footer {
     width: 10rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     text-align: center;
     text-decoration: none;
     font-weight: 700;
@@ -125,12 +128,16 @@ footer {
     border-radius: 1rem;
 }
 
+.content .btn_CTA:hover {
+    background-color: var(--bg-secondary);
+}
+
 .content .c-resultados {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: colum;
     margin-bottom: 5rem;
     flex-wrap: wrap;
 }
@@ -143,6 +150,7 @@ footer {
     align-items: center;
     margin-bottom: 5rem;
     border-radius: 2rem;
+    padding: 1.2rem;
 }
 
 .content .c-resultados .resultado .text{
