@@ -1,9 +1,17 @@
+/* =========================
+   VARIABLES
+========================= */
 :root {
-    --bg-primary: #BC155B;
-    --bg-secondary: #FF5C9C;
-    --bg-pink-white: #FFDBE9;
+    --color-primary: #BC155B;
+    --color-secondary: #FF5C9C;
+    --color-pink-light: #FFDBE9;
+    --color-white: #ffffff;
+    --color-black: #000000;
 }
 
+/* =========================
+   RESET & BASE
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -13,29 +21,36 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff;
+    background-color: var(--color-white);
+    color: var(--color-black);
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: inherit;
 }
 
 h2 {
-    font-size: xx-large;
-    color: var(--bg-primary);
-    padding: 2rem;
+    font-size: 2rem;
+    color: var(--color-primary);
+    padding: 2rem 0;
 }
 
+/* =========================
+   HEADER
+========================= */
 header {
-    padding-left: 7rem;
-    padding-right: 10rem;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--bg-primary);
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 10rem 0 7rem;
+    background-color: var(--color-primary);
 }
 
 header img {
@@ -50,167 +65,216 @@ header nav {
 }
 
 header nav a {
-    color: #ffffff;
+    position: relative;
+    color: var(--color-white);
+    padding: 0.5rem 0;
 }
 
-header nav a:hover {
-    border-bottom: 0.3rem solid var(--bg-secondary);
-    padding: 0.3rem;
+header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+
+    width: 0%;
+    height: 0.3rem;
+
+    background-color: var(--color-secondary);
+    border-radius: 1rem;
+
+    transition: width 0.3s ease;
 }
 
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
     height: 20rem;
-    padding-left: 10rem;
-    padding-right: 10rem;
-    padding-top: 5rem;
+    padding: 5rem 10rem 0;
+
     display: flex;
     justify-content: space-between;
-    background-color: var(--bg-primary);
+
+    background-color: var(--color-primary);
 }
 
+/* =========================
+   MAIN CONTENT
+========================= */
 .content {
-    padding-left: 9rem;
-    padding-right: 10rem;
     margin-top: 5rem;
+    padding: 0 10rem 0 9rem;
+
     background-image: url(../assets/img/grafismo.svg);
     background-repeat: no-repeat;
     background-size: 65rem;
-    background-position-x: 45rem;
-    background-position-y: -20rem;
+    background-position: 45rem -20rem;
 }
 
+/* Text block */
 .content .text {
     width: 60%;
-    height: auto;
     text-align: justify;
     text-indent: 2rem;
 }
 
+/* =========================
+   CARD SECTION
+========================= */
 .content .card {
-    width: 100%;
-    padding-top: 4rem;
     display: flex;
     justify-content: space-between;
+
+    width: 100%;
+    padding-top: 4rem;
     margin-bottom: 8rem;
 }
 
-.content .card img {
+.card .img-curiosidades {
     width: 26rem;
 }
 
-.content .card .card-infor {
+.card-infor {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.content .card .torcicolo {
+.torcicolo {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
 
-.content .card .torcicolo .title-torcicolo {
+.title-torcicolo {
     display: flex;
-    justify-content: flex-start;
     align-items: flex-start;
 }
 
-.content .btn_CTA {
+/* =========================
+   BUTTON
+========================= */
+.btn_CTA {
     width: 10rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    background: var(--bg-primary);
+    padding: 1.5rem 0;
+
+    display: inline-block;
     text-align: center;
-    text-decoration: none;
+
     font-weight: 700;
-    color: #ffffff;
+    color: var(--color-white);
+    background-color: var(--color-primary);
     border-radius: 1rem;
+
+    transition: background-color 0.3s ease;
 }
 
-.content .btn_CTA:hover {
-    background-color: var(--bg-secondary);
+.btn_CTA:hover {
+    background-color: var(--color-secondary);
 }
 
-.content .c-resultados {
-    width: 100%;
-    height: auto;
+/* =========================
+   RESULTADOS
+========================= */
+.c-resultados {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: colum;
-    margin-bottom: 5rem;
     flex-wrap: wrap;
+    gap: 5rem;
+
+    margin-bottom: 5rem;
 }
 
-.content .c-resultados .resultado {
+.resultado {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
-    border-radius: 2rem;
+    gap: 2rem;
+
     padding: 1.2rem;
+    border-radius: 2rem;
+    transition: transform 0.3s ease;
 }
 
-.content .c-resultados .resultado .text{
+.resultado .text {
     font-style: italic;
-
 }
 
-.content .c-resultados .bg_alternative {
-    background: var(--bg-pink-white);
+.bg_alternative {
+    background-color: var(--color-pink-light);
 }
 
-.content .c-resultados .img_resultado {
+.img_resultado {
     width: 15rem;
 }
 
-.content .c-quem {
+.resultado:hover{
+    transform: scale(1.09);
+}
+/* =========================
+   QUEM SOU
+========================= */
+.c-quem {
     display: flex;
     flex-direction: column;
 }
 
-.content .card .quem-sou {
+.quem-sou {
     display: flex;
     align-items: flex-start;
-    background-color: var(--bg-secondary);
-    padding: 5rem;
+
     height: 50rem;
+    padding: 5rem;
+
+    background-color: var(--color-secondary);
     background-image: url(../assets/img/fisio.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position-x: right;
+    background-position: right;
+
     border-radius: 2rem;
 }
-
-.content .card .cards-especializacao {
-    margin-top: 5rem;
-    display: grid;
-    grid-template-columns: repeat(2, 5fr);
-    grid-template-rows: repeat(3, 2fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    color: var(--bg-pink-white);
-}
-
-.content .card .especializacao {
-    display: flex;
-    align-items: flex-start; 
-    justify-content: center;
-    background-color: var(--bg-secondary);
-    padding: 3rem;
-    height: 3rem;
-    border-radius: 2rem;
-}
-
-.div1 { grid-area: 3 / 1 / 4 / 3; }
-.div2 { grid-area: 1 / 1; }
-.div3 { grid-area: 2 / 1; }
-.div4 { grid-area: 1 / 2; }
-.div5 { grid-area: 2 / 2; }
 
 .quem-sou p {
-    color: #FFDBE9;
     width: 50%;
+    color: var(--color-pink-light);
+}
+
+/* =========================
+   ESPECIALIZAÇÕES
+========================= */
+.cards-especializacao {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container_esp {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.especializacao {
+    width: 20%;
+    height: 15rem;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--color-secondary);
+    border-radius: 2rem;
+
+    transition: transform 0.3s ease;
+}
+
+.especializacao:hover {
+    transform: scale(1.09);
+}
+
+.especializacao p {
+    color: var(--color-pink-light);
 }
