@@ -9,7 +9,21 @@
     --color-white: #ffffff;
     --color-black: #000000;
 }
-        
+
+/* =========================
+   FONTS
+========================= */
+
+@font-face {
+    font-family: 'MonteCalor';
+    src: url(../assets/fonts/MonteCarlo-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Diphylleia';
+    src: url(../assets/fonts/Diphylleia-Regular.ttf);
+}
+
 /* =========================
    RESET & BASE
 ========================= */
@@ -33,6 +47,7 @@ a {
 }
 
 h2 {
+    font-family: 'diphylleia';
     font-size: 2rem;
     color: var(--color-primary);
     padding: 2rem 0;
@@ -118,16 +133,85 @@ footer section img {
 }
 
 /* =========================
+   DROPDOWN
+========================= */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: larger;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 2.4rem;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    background-color: var(--color-white);
+    padding: 1rem;
+    border-radius: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+
+    width: 0%;
+    height: 0.3rem;
+
+    background-color: var(--color-secondary);
+    border-radius: 1rem;
+
+    transition: width 0.3s ease;
+}
+
+.dropdown:hover::after {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.dropdown-menu a:hover {
+    color: var(--color-secondary);
+}
+
+/* estado aberto */
+.dropdown.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* =========================
    MAIN CONTENT
 ========================= */
 .content {
     margin-top: 5rem;
     padding: 0 10rem 0 9rem;
 
-    background-image: url(../assets/img/grafismo.svg);
+    /* background-image: url(../assets/img/grafismo.svg);
     background-repeat: no-repeat;
     background-size: 65rem;
-    background-position: 45rem -20rem;
+    background-position: 45rem -20rem; */
 }
 
 /* Text block */
@@ -138,6 +222,21 @@ footer section img {
     flex-direction: column;
     margin-left: 1rem;
 }
+
+/* =========================
+   APRESENTATION
+========================= */
+.apresentation {
+    background-color: #000000;
+    width: 100%;
+    height: 40rem;
+    padding: 2rem;
+}
+
+.apresentation img{
+    width: 250px;
+}
+
 
 /* =========================
    CARD SECTION
@@ -219,9 +318,9 @@ footer section img {
 }
 
 /* =========================
-   relatosS
+   RELATOS
 ========================= */
-.c-relatoss {
+.c-relatos {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
@@ -262,6 +361,10 @@ footer section img {
     box-shadow: 0px 2px 12px #c2c2c2;
 }
 
+.relatos:nth-child(even) {
+  background-color: var(--color-pink-light);
+}
+
 /* =========================
    QUEM SOU
 ========================= */
@@ -272,23 +375,24 @@ footer section img {
 
 .quem-sou {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
 
     height: 50rem;
     padding: 5rem;
 
     background-color: var(--color-pink-light);
-    background-image: url(../assets/img/fisio.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-
     border-radius: 2rem;
 }
 
-.quem-sou p {
+.content-texte {
     width: 50%;
     color: var(--color-black);
+}
+
+.quem-sou img {
+    width: 24rem;
+    margin-left: 2rem;
 }
 
 /* =========================

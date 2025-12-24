@@ -13,7 +13,14 @@
     <header>
         <img src="./assets/img/Logo_horizontal.svg" alt="Logo Débora Queiroz">
         <nav>
-            <a href="#curiosidades">Curiosidades</a>
+            <div class="dropdown">
+                <button class="dropdown-btn">Tratamentos</button>
+                <div class="dropdown-menu">
+                    <a href="#assimetria">Assimetria</a>
+                    <a href="#torcicolo">Torcicolo</a>
+                </div>
+            </div>
+
             <a href="#relatos">Relatos</a>
             <a href="#sobre">Sobre</a>
             <a href="#contatos">Contatos</a>
@@ -21,8 +28,14 @@
     </header>
 
     <main class="content">
-        <section class="slide">slide aqui</section>
-        <section id="curiosidades" class="card">
+        <section class="apresentation">
+            <img src="./assets/img/Débora_atendimento.jpeg" alt="" width="100px">
+            <img src="./assets/img/Débora_atendimento02.jpeg" alt="" width="100px">
+
+            <a class="btn_CTA" href="">Contatos</a>
+
+        </section>
+        <section id="assimetria" class="card">
             <div class="card-infor">
                 <h2>O que é assimetria?</h2>
                 <p class="text">Assimetria craniana é a irregularidade no formato do crânio do bebê, geralmente causada
@@ -30,11 +43,10 @@
                     das suturas do crânio (craniossinostose). As formas posicionais, como plagiocefalia e braquicefalia,
                     são mais comuns e geralmente respondem bem a tratamentos como mudanças de posicionamento,
                     fisioterapia e, em casos mais graves, órteses cranianas. </p>
-                <a class="btn_CTA" href="">Contatos</a>
             </div>
             <img class="img-curiosidades" src="./assets/img/bebe.png" alt="Imagem de Débora">
         </section>
-        <section class="card">
+        <section id="torcicolo" class="card">
             <div class="torcicolo">
                 <img src="./assets/img/torcicolo.png" alt="Imagem de Débora">
                 <div class="card_torcicolo">
@@ -51,7 +63,7 @@
                 </div>
             </div>
         </section>
-        <section id="relatos" class="c-relatoss">
+        <section id="relatos" class="c-relatos">
             <h2>Relatos</h2>
             <div class="relatos">
                 <!-- <img class="img_relatos" src="./assets/img/bebe.png" alt="Imagem do tópico"> -->
@@ -126,31 +138,34 @@
         <section id="sobre" class="card c-quem">
             <h2>Sobre mim</h2>
 
-            <div class="card-infor quem-sou">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nisi similique at dolorem cum sunt
-                    numquam ipsum atque perferendis architecto, totam, nulla neque molestias, itaque aut recusandae
-                    fugit pariatur beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quidem
-                    animi, rerum et aspernatur unde blanditiis perferendis suscipit veniam magnam sapiente
-                    assumenda, sint error, amet sit tempore quas dolorem earum. Lorem ipsum dolor, sit amet
-                    consectetur adipisicing elit. Quisquam, officia! Nostrum rerum facilis esse eveniet sint in
-                    quibusdam vitae, voluptate aut beatae aliquam quidem, amet dicta tempore. Distinctio, eos atque.
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nisi similique at dolorem cum sunt
-                    numquam ipsum atque perferendis architecto, totam, nulla neque molestias, itaque aut recusandae
-                    fugit pariatur beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quidem
-                    animi, rerum et aspernatur unde blanditiis perferendis suscipit veniam magnam sapiente
-                    assumenda, sint error, amet sit tempore quas dolorem earum. Lorem ipsum dolor, sit amet
-                    consectetur adipisicing elit. Quisquam, officia! Nostrum rerum facilis esse eveniet sint in
-                    quibusdam vitae, voluptate aut beatae aliquam quidem, amet dicta tempore. Distinctio, eos atque.
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nisi similique at dolorem cum sunt
-                    numquam ipsum atque perferendis architecto, totam, nulla neque molestias, itaque aut recusandae
-                    fugit pariatur beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quidem
-                    animi, rerum et aspernatur unde blanditiis perferendis suscipit veniam magnam sapiente
-                    assumenda, sint error, amet sit tempore quas dolorem earum. Lorem ipsum dolor, sit amet
-                    consectetur adipisicing elit. Quisquam, officia! Nostrum rerum facilis esse eveniet sint in
-                    quibusdam vitae, voluptate aut beatae aliquam quidem, amet dicta tempore. Distinctio, eos atque.
-                </p>
+            <div class="quem-sou">
+                <div class="content-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nisi similique at dolorem cum sunt
+                        numquam ipsum atque perferendis architecto, totam, nulla neque molestias, itaque aut recusandae
+                        fugit pariatur beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quidem
+                        animi, rerum et aspernatur unde blanditiis perferendis suscipit veniam magnam sapiente
+                        assumenda, sint error, amet sit tempore quas dolorem earum. Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Quisquam, officia! Nostrum rerum facilis esse eveniet sint in
+                        quibusdam vitae, voluptate aut beatae aliquam quidem, amet dicta tempore. Distinctio, eos atque.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nisi similique at dolorem cum sunt
+                        numquam ipsum atque perferendis architecto, totam, nulla neque molestias, itaque aut recusandae
+                        fugit pariatur beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quidem
+                        animi, rerum et aspernatur unde blanditiis perferendis suscipit veniam magnam sapiente
+                        assumenda, sint error, amet sit tempore quas dolorem earum. Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Quisquam, officia! Nostrum rerum facilis esse eveniet sint in
+                        quibusdam vitae, voluptate aut beatae aliquam quidem, amet dicta tempore. Distinctio, eos atque.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nisi similique at dolorem cum sunt
+                        numquam ipsum atque perferendis architecto, totam, nulla neque molestias, itaque aut recusandae
+                        fugit pariatur beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quidem
+                        animi, rerum et aspernatur unde blanditiis perferendis suscipit veniam magnam sapiente
+                        assumenda, sint error, amet sit tempore quas dolorem earum. Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Quisquam, officia! Nostrum rerum facilis esse eveniet sint in
+                        quibusdam vitae, voluptate aut beatae aliquam quidem, amet dicta tempore. Distinctio, eos atque.
+                    </p>
+                </div>
+                <img src="./assets/img/Débora.jpeg" alt="Débora em atendimento a uma criança">
             </div>
             <section class="cards-especializacao">
                 <h2>Especializações</h2>
