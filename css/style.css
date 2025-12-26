@@ -15,7 +15,7 @@
 ========================= */
 
 @font-face {
-    font-family: 'MonteCalor';
+    font-family: 'MonteCarlo';
     src: url(../assets/fonts/MonteCarlo-Regular.ttf);
 }
 
@@ -35,7 +35,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:    verdana;
     background-color: var(--color-white);
     color: var(--color-black);
 }
@@ -166,25 +166,6 @@ footer section img {
     transition: all 0.3s ease;
 }
 
-.dropdown::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.3rem;
-
-    width: 0%;
-    height: 0.3rem;
-
-    background-color: var(--color-secondary);
-    border-radius: 1rem;
-
-    transition: width 0.3s ease;
-}
-
-.dropdown:hover::after {
-    width: 100%;
-}
-
 .dropdown-menu a {
     color: var(--color-primary);
     font-weight: 600;
@@ -230,13 +211,15 @@ footer section img {
     background-color: #000000;
     width: 100%;
     height: 40rem;
-    padding: 2rem;
+    margin-top: 8rem;
+    border-radius: 2rem;
+    padding: 2rem 0 0 4rem;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;    
 }
-
-.apresentation img{
-    width: 250px;
+.apresentation.active{
+    opacity: 1;
 }
-
 
 /* =========================
    CARD SECTION
@@ -304,6 +287,8 @@ footer section img {
 
     display: inline-block;
     text-align: center;
+    top: 25rem;
+    position: relative;
 
     font-weight: 700;
     color: var(--color-white);
