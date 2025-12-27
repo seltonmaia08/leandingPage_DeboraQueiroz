@@ -14,24 +14,39 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// add icones de estrelas nos relatos
+const icons = document.querySelectorAll(".icon")
+icons.forEach(container => {
+    for (let i = 0; i < 5; i++) {
+        const iconStar = document.createElement('i')
+        iconStar.classList.add('bi', 'bi-star-fill', 'star')
+        container.appendChild(iconStar)
+    }
+})
+
+// pegar o ano atual
+
+const year = new Date()
+const spanYear = document.querySelector('#year').textContent = year.getFullYear()
+
 //Slide
-const section = document.querySelector('#apresentation');
-const images = [
-    './assets/img/debora_atendimento_1.png',
-    './assets/img/debora_atendimento_2.png',
-    './assets/img/debora_atendimento_3.png'
-]
-let index = 0
-function trocarBgImage() {
-  section.classList.remove('active')
+// const section = document.querySelector('#apresentation');
+// const images = [
+//     './assets/img/debora_atendimento_1.png',
+//     './assets/img/debora_atendimento_2.png',
+//     './assets/img/debora_atendimento_3.png'
+// ]
+// let index = 0
+// function trocarBgImage() {
+//   section.classList.remove('active')
 
-  section.style.backgroundImage = `url(${images[index]})`
+//   section.style.backgroundImage = `url(${images[index]})`
 
-  section.classList.add('active')
+//   section.classList.add('active')
 
-  index = (index + 1) % images.length
+//   index = (index + 1) % images.length
 
-  setTimeout(trocarBgImage, 5000)
-}
+//   setTimeout(trocarBgImage, 5000)
+// }
 
-trocarBgImage()
+// trocarBgImage()

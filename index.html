@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
@@ -14,7 +15,7 @@
         <img src="./assets/img/Logo_horizontal.svg" alt="Logo Débora Queiroz">
         <nav>
             <div class="dropdown">
-                <a href="#" class="dropdown-btn">Tratamentos</a>
+                <a class="dropdown-btn">Tratamentos</a>
                 <div class="dropdown-menu">
                     <a href="#assimetria">Assimetria</a>
                     <a href="#torcicolo">Torcicolo</a>
@@ -30,10 +31,9 @@
     <main class="content">
         <section id="apresentation" class="apresentation">
             <a class="btn_CTA" href="">Contatos</a>
-
         </section>
-        <section id="assimetria" class="card">
-            <div class="card-infor">
+        <section id="assimetria" class="assimetria">
+            <div class="assimetria-infor">
                 <h2>O que é assimetria?</h2>
                 <p class="text">Assimetria craniana é a irregularidade no formato do crânio do bebê, geralmente causada
                     por pressão constante em um lado da cabeça (assimetria posicional) ou por um fechamento prematuro
@@ -41,7 +41,7 @@
                     são mais comuns e geralmente respondem bem a tratamentos como mudanças de posicionamento,
                     fisioterapia e, em casos mais graves, órteses cranianas. </p>
             </div>
-            <img class="img-curiosidades" src="./assets/img/bebe.png" alt="Imagem de Débora">
+            <img src="./assets/img/bebe.png" alt="Imagem de Débora">
         </section>
         <section id="torcicolo" class="card">
             <div class="torcicolo">
@@ -63,8 +63,9 @@
         <section id="relatos" class="c-relatos">
             <h2>Relatos</h2>
             <div class="relatos">
-                <!-- <img class="img_relatos" src="./assets/img/bebe.png" alt="Imagem do tópico"> -->
+                <div class="icon"></div>
                 <p class="text">
+                    <b>Isabel, mãe da Maria Luísa.</b>
                     Nossa experiência com a tia Débora foi maravilhosa, além de ser uma pessoa muito humana você é muito
                     profissional.
                     O tratamento da Maria Luísa foi ótimo (dentro do esperado pela idade dela), seu cuidado, carinho e
@@ -74,22 +75,22 @@
                     para que esse processo fosse mais tranquilo. Além do uso de ferramentas apropriadas e o
                     acompanhamento das evoluções entre
                     as sessões nos deixam mais seguras quanto ao tratamento.
-                    <span>Isabel, mãe da Maria Luísa.</span>
                 </p>
             </div>
             <div class="relatos">
-                <!-- <img class="img_relatos" src="./assets/img/bebe.png" alt="Imagem do tópico"> -->
+                <div class="icon"></div>
                 <p class="text">
+                    <b>Alyne, mãe do Emanuel.</b>
                     O seu acompanhamento ajudou muito no desenvolvimento do Emauel, não tratou somente
                     da assimetria e do torcicolo. Você é uma excelente profissional, foi muito atenciosa, cuidadosa e
                     amorosa com meu filho e com a gente também, estávamos assustados e você procurou sempre nos acalmar,
                     obrigada!
-                    <span>Alyne, mãe do Emanuel.</span>
                 </p>
             </div>
             <div class="relatos">
-                <!-- <img class="img_relatos" src="./assets/img/bebe.png" alt="Imagem do tópico"> -->
+                <div class="icon"></div>
                 <p class="text">
+                    <b>Isabella, mãe da Anna. </b>
                     A Débora entrou em nossas vidas quando eu já tinha desistido em investir tempo e dinheiro na
                     assimetria craniana da Anna. Tínhamos buscado outro profissional que não trouxe resultados e nem
                     boas
@@ -99,12 +100,12 @@
                     formar um vínculo maravilhoso com a Anna, e assim a minha filha evoluiu com
                     melhora dos sintomas e recebeu alta. Agradeço a Débora pelo cuidado e pela responsabilidade no
                     tratamento da Anna, e seguirei recomendando o trabalho dela para outras mães.
-                    <span>Isabella, mãe da Anna. </span>
                 </p>
             </div>
             <div class="relatos">
-                <!-- <img class="img_relatos" src="./assets/img/bebe.png" alt="Imagem do tópico"> -->
+                <div class="icon"></div>
                 <p class="text">
+                    <b>Kezia, mãe do José Davi. </b>
                     Meu filho José Davi nasceu com torcicolo congênito, ele inclinava a cabeça para o lado direito e
                     apresentava assimetrias cranianas visíveis.
                     A escolha correta do fisioterapeuta que irá tratar a criança é de extrema importância para o
@@ -118,17 +119,16 @@
                     A paciência e o acompanhamento da Débora fizeram toda a diferença. Hoje, com 8 meses, meu filho está
                     curado, está ativo e sem sequelas – ele tem um ótimo desenvolvimento para a idade dele. Recomendo o
                     tratamento a todos os pais nessa situação: vale cada esforço pela saúde plena da criança.
-                    <span>Kezia, mãe do José Davi. </span>
                 </p>
             </div>
             <div class="relatos">
-                <!-- <img class="img_relatos" src="./assets/img/bebe.png" alt="Imagem do tópico"> -->
+                <div class="icon"></div>
                 <p class="text">
-                    Titia Débora, eu tenho imensa gratidão por ter cuidado do meu bebê e da saúde dele com muito cuidado
-                    e dedicação. Sua calma, sua paciência e carinho ao explicar cada diagnóstico… você foi um anjo que
-                    caiu do céu pra gente, agradeço a Deus todo dia!! Hoje meu bebê se encontra bem, sem a braquicefalia
-                    Foi lindo de ver cada acompanhamento, cada consulta e cada evolução… Obrigado titia Débora.
-                    <span>Vanessa. </span>
+                <b>Vanessa. </b>
+                Titia Débora, eu tenho imensa gratidão por ter cuidado do meu bebê e da saúde dele com muito cuidado
+                e dedicação. Sua calma, sua paciência e carinho ao explicar cada diagnóstico… você foi um anjo que
+                caiu do céu pra gente, agradeço a Deus todo dia!! Hoje meu bebê se encontra bem, sem a braquicefalia
+                Foi lindo de ver cada acompanhamento, cada consulta e cada evolução… Obrigado titia Débora.
                 </p>
             </div>
         </section>
@@ -137,29 +137,20 @@
 
             <div class="quem-sou">
                 <div class="content-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nisi similique at dolorem cum sunt
-                        numquam ipsum atque perferendis architecto, totam, nulla neque molestias, itaque aut recusandae
-                        fugit pariatur beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quidem
-                        animi, rerum et aspernatur unde blanditiis perferendis suscipit veniam magnam sapiente
-                        assumenda, sint error, amet sit tempore quas dolorem earum. Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit. Quisquam, officia! Nostrum rerum facilis esse eveniet sint in
-                        quibusdam vitae, voluptate aut beatae aliquam quidem, amet dicta tempore. Distinctio, eos atque.
+                    <p>
+                        "Cristã, casada e fisioterapeuta que ama o que faz. Sou apaixonada por crianças! Aonde eu
+                        estiver, seja no trabalho, no mercado ou restaurante, amo observá-las, aprendendo mais sobre
+                        seus comportamentos e necessidades.
                     </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nisi similique at dolorem cum sunt
-                        numquam ipsum atque perferendis architecto, totam, nulla neque molestias, itaque aut recusandae
-                        fugit pariatur beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quidem
-                        animi, rerum et aspernatur unde blanditiis perferendis suscipit veniam magnam sapiente
-                        assumenda, sint error, amet sit tempore quas dolorem earum. Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit. Quisquam, officia! Nostrum rerum facilis esse eveniet sint in
-                        quibusdam vitae, voluptate aut beatae aliquam quidem, amet dicta tempore. Distinctio, eos atque.
+                    <p>
+                        Desde a faculdade já sabia que queria trabalhar atendendo bebês. Hoje atendo em ambiente
+                        hospitalar com RNs na UTI neontal e também à domicílio cuidando dos bebês que apresentam
+                        assimetria craniana e torcicolo congênito ou posicional, viabilizando a melhora na sua qualidade
+                        de vida, bem como na de suas famílias.
                     </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nisi similique at dolorem cum sunt
-                        numquam ipsum atque perferendis architecto, totam, nulla neque molestias, itaque aut recusandae
-                        fugit pariatur beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quidem
-                        animi, rerum et aspernatur unde blanditiis perferendis suscipit veniam magnam sapiente
-                        assumenda, sint error, amet sit tempore quas dolorem earum. Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit. Quisquam, officia! Nostrum rerum facilis esse eveniet sint in
-                        quibusdam vitae, voluptate aut beatae aliquam quidem, amet dicta tempore. Distinctio, eos atque.
+                    <p>
+                        Meu foco é o cuidado humanizado, sempre utilizando o toque suave e terapêutico, respeitando o
+                        tempo do bebê e os sinais de conforto ou dor que ele apresenta."
                     </p>
                 </div>
                 <img src="./assets/img/Débora.jpeg" alt="Débora em atendimento a uma criança">
@@ -197,12 +188,18 @@
         </section>
     </main>
     <footer id="contatos">
-        <section>
+        <div class="logo">
             <img src="./assets/img/Logo_horizontal.svg" alt="Logo da marca">
-            <p>informações da cliente</p>
-            <a href="">@debora.queiroz31</a>
-        </section>
-        <p>Mais informações</p>
+            <p>Cuidando com carinho dos bebês com assimetrias crânianas e torcicolo posicional ou congênito</p>
+        </div>
+        <div class="contatos">
+            <a><i class="bi bi-envelope-fill email"></i> deboram.fisioterapia@gmail.com</a>
+            <a href=""><i class="bi bi-whatsapp whatsapp"></i>(85) 99695-7607</a>
+            <a href="https://www.instagram.com/debora.queiroz31?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram instagram"></i>@debora.queiroz31</a>
+        </div>
+        <div class="outros">
+            <p><i class="bi bi-c-circle copyright"></i> <span id="year"></span> Débora Queiroz. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <!-- call to script javascript -->
