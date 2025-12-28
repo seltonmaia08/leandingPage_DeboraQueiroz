@@ -28,25 +28,3 @@ icons.forEach(container => {
 
 const year = new Date()
 const spanYear = document.querySelector('#year').textContent = year.getFullYear()
-
-//Slide
-// const section = document.querySelector('#apresentation');
-// const images = [
-//     './assets/img/debora_atendimento_1.png',
-//     './assets/img/debora_atendimento_2.png',
-//     './assets/img/debora_atendimento_3.png'
-// ]
-// let index = 0
-// function trocarBgImage() {
-//   section.classList.remove('active')
-
-//   section.style.backgroundImage = `url(${images[index]})`
-
-//   section.classList.add('active')
-
-//   index = (index + 1) % images.length
-
-//   setTimeout(trocarBgImage, 5000)
-// }
-
-// trocarBgImage()
