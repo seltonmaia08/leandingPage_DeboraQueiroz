@@ -14,6 +14,14 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// fechar dropdown ao clicar em um link interno
+const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+dropdownLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        dropdown.classList.remove('active');
+    });
+});
+
 // add icones de estrelas nos relatos
 const icons = document.querySelectorAll(".icon")
 icons.forEach(container => {
@@ -25,6 +33,18 @@ icons.forEach(container => {
 })
 
 // pegar o ano atual
-
 const year = new Date()
 const spanYear = document.querySelector('#year').textContent = year.getFullYear()
+
+//animações ao carregar o site
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.15 });
+
+cards.forEach(card => observer.observe(card));

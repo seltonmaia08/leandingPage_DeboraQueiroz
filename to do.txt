@@ -1,0 +1,17 @@
+TO DO
+
+- e deixar tudo responsivo - Leticia
+- Add mais textos explicativos para assimetria e torcicolo
+- Hospedar o site
+
+DOIN
+
+- animações JS
+
+
+DONE
+
+- primeira sessão de apresentação
+- ajustar e organizar o sobre mim
+- mudar logo rodapé 
+- mudar fonte dos títulos - 
