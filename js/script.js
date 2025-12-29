@@ -36,15 +36,41 @@ icons.forEach(container => {
 const year = new Date()
 const spanYear = document.querySelector('#year').textContent = year.getFullYear()
 
-//animações ao carregar o site
-const cards = document.querySelectorAll('.card');
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
-    });
-}, { threshold: 0.15 });
+// Abrir i fechar menu de acessibilidade
+const accessibility = document.querySelector('.accessibility');
+const btnAccessibility = document.querySelector('.btn_accessibility');
 
-cards.forEach(card => observer.observe(card));
+btnAccessibility.addEventListener('click', () => {
+    accessibility.classList.toggle('active');
+});
+
+// fecha ao clicar fora
+document.addEventListener('click', (e) => {
+    if (!accessibility.contains(e.target)) {
+        accessibility.classList.remove('active');
+    }
+});
+
+// aumentar e diminuir fonte
+const aumentarFonte = document.querySelector("#aumentar-fonte");
+
+aumentarFonte.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (aumentarFonte.textContent === "Aa +") {
+        aumentarFonte.innerHTML = 'Aa -'
+        document.body.classList.add('fonte-grande');
+    }
+    else {
+        aumentarFonte.innerHTML = 'Aa +'
+        document.body.classList.remove('fonte-grande');
+
+    }
+})
+
+// alternar o contraste
+const alternarContraste = document.querySelector('#contraste');
+alternarContraste.addEventListener('click', (event) => {
+    event.preventDefault()
+    document.body.classList.toggle('alto-contraste')
+})
