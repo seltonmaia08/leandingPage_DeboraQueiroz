@@ -23,18 +23,18 @@ dropdownLinks.forEach(link => {
 });
 
 // add icones de estrelas nos relatos
-const icons = document.querySelectorAll(".icon")
+const icons = document.querySelectorAll(".icon");
 icons.forEach(container => {
     for (let i = 0; i < 5; i++) {
-        const iconStar = document.createElement('i')
-        iconStar.classList.add('bi', 'bi-star-fill', 'star')
-        container.appendChild(iconStar)
+        const iconStar = document.createElement('i');
+        iconStar.classList.add('bi', 'bi-star-fill', 'star');
+        container.appendChild(iconStar);
     }
 })
 
 // pegar o ano atual
-const year = new Date()
-const spanYear = document.querySelector('#year').textContent = year.getFullYear()
+const year = new Date();
+const spanYear = document.querySelector('#year').textContent = year.getFullYear();
 
 
 // Abrir i fechar menu de acessibilidade
@@ -58,19 +58,33 @@ const aumentarFonte = document.querySelector("#aumentar-fonte");
 aumentarFonte.addEventListener('click', (event) => {
     event.preventDefault();
     if (aumentarFonte.textContent === "Aa +") {
-        aumentarFonte.innerHTML = 'Aa -'
+        aumentarFonte.innerHTML = 'Aa -';
         document.body.classList.add('fonte-grande');
     }
     else {
-        aumentarFonte.innerHTML = 'Aa +'
+        aumentarFonte.innerHTML = 'Aa +';
         document.body.classList.remove('fonte-grande');
 
     }
 })
 
 // alternar o contraste
+
+const imageURLHeader = ['./assets/img/Logo_horizontal.svg', './assets/img/logo_v-negativa.svg'];
+const imageURLFooter = ['./assets/img/Logo_bgPink.svg', './assets/img/logo_v-negativa.svg'];
+
+const logoHeader = document.querySelector('#logo-header');
+const logoFooter = document.querySelector('#logo-footer');
+logoHeader.src = imageURLHeader[0]
+logoFooter.src = imageURLFooter[0]
+
 const alternarContraste = document.querySelector('#contraste');
 alternarContraste.addEventListener('click', (event) => {
-    event.preventDefault()
-    document.body.classList.toggle('alto-contraste')
+    event.preventDefault();
+    document.body.classList.toggle('alto-contraste');
+
+    const index = document.body.classList.contains('alto-contraste') ? 1 : 0;
+    logoHeader.src = `${imageURLHeader[index]}`;
+    logoFooter.src = `${imageURLFooter[index]}`;
+
 })
