@@ -340,6 +340,17 @@ footer img {
     height: 36rem;
 }
 
+.como-funciona{
+    width: 100%;
+    height: 100vh;
+    padding: 4rem;
+}
+
+.como-funciona img{
+    width: 36rem;
+    height: 36rem;
+}
+
 /* =========================
    BUTTON
 ========================= */
