@@ -230,8 +230,10 @@ footer img {
 
 /*estado da setinha quando abre*/
 .arrow {
-  display: inline-block;
-  transition: transform 0.3s ease;
+    display: inline-flex;
+    font-size: 0.7em;
+    line-height: 1;
+    transition: transform 0.3s ease;
 }
 
 .dropdown.active .arrow {
