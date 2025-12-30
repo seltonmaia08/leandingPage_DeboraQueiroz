@@ -53,6 +53,14 @@ a {
 
 h1 {
     font-family: 'diphylleia';
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--color-primary);
+    line-height: 1.2;
+    width: 100%;
+}
+h2 {
+    font-family: 'diphylleia';
     font-size: 3rem;
     font-weight: 400;
     color: var(--color-primary);
@@ -86,6 +94,7 @@ body.alto-contraste header,
 body.alto-contraste footer,
 body.alto-contraste div,
 body.alto-contraste h1,
+body.alto-contraste h2,
 body.alto-contraste p,
 body.alto-contraste a {
     background-color: #000000 !important;
@@ -242,7 +251,7 @@ footer img {
     background-position-y: -8rem;
 }
 
-.site-construção h1 {
+.site-construção h2 {
     color: #BC155B;
     font-size: 3rem;
     letter-spacing: 1px;
@@ -312,7 +321,7 @@ footer img {
     left: 5rem;
 }
 
-.card_apresentation h1 {
+.card_apresentation h2 {
     width: 85%;
     margin-left: -4rem;
 }
@@ -337,7 +346,7 @@ footer img {
 
 }
 
-.card_apresentation h1 {
+.card_apresentation h2 {
     width: 85%;
 
     font-family: 'diphylleia';

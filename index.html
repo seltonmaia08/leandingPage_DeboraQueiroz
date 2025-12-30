@@ -13,26 +13,29 @@
 <body>
 
     <header>
-        <img id="logo-header" alt="Logo Débora Queiroz">
+        <img id="logo-header" alt="Logo Débora Queiroz Cabeçalho">
         <nav>
             <div class="dropdown">
-                <a class="dropdown-btn">Tratamentos</a>
+                <a class="dropdown-btn" aria-label="Este botão abre um menu suspenso">Tratamentos</a>
                 <div class="dropdown-menu">
-                    <a href="#assimetria">Assimetria</a>
-                    <a href="#torcicolo">Torcicolo</a>
-                    <a href="#como-funciona">Como funciona</a>
+                    <a href="#assimetria"
+                        aria-label="Este botão leva para a sessão de o que é assimetria">Assimetria</a>
+                    <a href="#torcicolo" aria-label="Este botão leva para a sessão de o que é torcicolo">Torcicolo</a>
+                    <a href="#como-funciona"
+                        aria-label="Este botão leva para a sessão de como funcionia o tratamento">Como funciona</a>
                 </div>
             </div>
 
-            <a href="#relatos">Relatos</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contatos">Contatos</a>
+            <a href="#relatos" aria-label="Este botão leva para a sessão de relatos">Relatos</a>
+            <a href="#sobre" aria-label="Este botão leva para a sessão que fala um pouco sobre a Débora">Sobre</a>
+            <a href="#contatos"
+                aria-label="Este botão leva para a rodapé onde se encontra os meios de contato com a Débora">Contatos</a>
         </nav>
     </header>
 
     <main class="content">
         <section class="site-construcao">
-            <h1>Esse Site está em construção. :)</h1>
+            <h2>Esse Site está em construção. :)</h2>
             <i class="bi bi-cone-striped"></i>
         </section>
         <section id="apresentation" class="apresentation">
@@ -42,14 +45,15 @@
                 <p class="descritivo">Atendimento domiciliar humanizado, focado no desenvolvimento saudável do bebê, com
                     acompanhamento
                     individualizado e orientação contínua à família.</p>
-                <a class="btn_CTA" href="#contatos">Contatos</a>
+                <a class="btn_CTA" href="#contatos"
+                    aria-label="Este botão leva para a rodapé onde se encontra os meios de contato com a Débora">Contatos</a>
             </div>
             <img src="./assets/img/debora_img_show.png" alt="imagem de Débora reailzando um atendimento.">
         </section>
         <section id="assimetria" class="assimetria">
-            <h1>O que é assimetria?</h1>
+            <h2>O que é assimetria?</h2>
             <div class="assimetria-infor">
-                <img src="./assets/img/bebe.png" alt="Imagem de Débora">
+                <img src="./assets/img/bebe.png" alt="Imagem representativa de um bebê com assimetria">
                 <p class="text">Assimetria craniana é a irregularidade no formato do crânio do bebê, geralmente causada
                     por pressão constante em um lado da cabeça (assimetria posicional) ou por um fechamento prematuro
                     das suturas do crânio (craniossinostose). As formas posicionais, como plagiocefalia e braquicefalia,
@@ -58,7 +62,7 @@
             </div>
         </section>
         <section id="torcicolo" class="torcicolo">
-            <h1>Torcicolo</h1>
+            <h2>Torcicolo</h2>
             <div class="card_torcicolo">
                 <p class="text">
                     Plagiocefalia posicional é o achatamento ou assimetria da cabeça do bebê, comum por
@@ -69,16 +73,16 @@
                     mas o
                     tratamento precoce é crucial para um bom resultados, sem cirurgia, distinguindo-se da
                     craniossinostose (fechamento precoce das suturas).</p>
-                <img src="./assets/img/torcicolo.png" alt="Imagem de Débora">
+                <img src="./assets/img/torcicolo.png" alt="Imagem representativa de um bebê com torcicolo">
             </div>
         </section>
         <section id="como-funciona" class="como-funciona">
-            <h1>Como funciona?</h1>
-            <img src="./assets/img/debora_procedimento.png" alt="Imagem de Débora realizando procedimento">
+            <h2>Como funciona?</h2>
+            <img src="./assets/img/debora_procedimento.png" alt="Imagem de Débora realizando o procedimento">
 
         </section>
         <section id="relatos" class="c-relatos">
-            <h1>Relatos</h1>
+            <h2>Relatos</h2>
             <section class="relatos">
                 <div class="icon"> <b>Isabel, mãe da Maria Luísa.</b></div>
                 <p class="text">
@@ -148,10 +152,10 @@
             </section>
         </section>
         <section id="sobre" class="c-quem">
-            <h1>Sobre mim</h1>
+            <h2>Sobre mim</h2>
 
             <div class="quem-sou">
-                <img src="./assets/img/debora_atendimento_1.png" alt="Débora em atendimento a uma criança">
+                <img src="./assets/img/debora_atendimento_1.png" alt="Débora segunrando uma criança em seu colo">
                 <div class="content-text">
                     <p>
                         "Cristã, casada e fisioterapeuta que ama o que faz. Sou apaixonada por crianças! Aonde eu
@@ -171,7 +175,7 @@
                 </div>
             </div>
             <section class="cards-especializacao">
-                <h1>Especializações</h1>
+                <h2>Especializações</h2>
                 <div class="card-container_esp">
                     <div class="card-infor especializacao ">
                         <p>
@@ -189,7 +193,7 @@
                         </p>
                     </div>
                 </div>
-                <h1>Experiências</h1>
+                <h2>Experiências</h2>
                 <div class="card-experiencias">
                     <div class="card-infor especializacao ">
                         <p>
@@ -206,22 +210,24 @@
         </section>
         <section class="accessibility">
             <div class="options-accessibility">
-                <a href="#" id="aumentar-fonte">Aa +</a>
-                <a href="#" id="contraste"><i class="bi bi-brilliance"></i></a>
+                <a href="#" id="aumentar-fonte" aria-label="Botão para aumentar ou diminuiu os textos do site">Aa +</a>
+                <a href="#" id="contraste" aria-label="botão para ativar ou desativar o alto contraste"><i class="bi bi-brilliance"></i></a>
             </div>
-            <button class="btn_accessibility"><i class="bi bi-universal-access"></i></button>
+            <button class="btn_accessibility" aria-label="Botão de Acessibilidade"><i class="bi bi-universal-access"></i></button>
         </section>
     </main>
     <footer id="contatos">
         <div class="footer-logo">
-            <img id="logo-footer" alt="Logo da marca">
+            <img id="logo-footer" alt="Logo Débora Queiroz rodapé">
             <p>Cuidado fisioterapêutico especializado para o desenvolvimento saudável do seu bebê.</p>
         </div>
         <div class="contatos">
-            <a><i class="bi bi-envelope-fill email"></i> deboram.fisioterapia@gmail.com</a>
-            <a href="https://wa.me/85996957607"><i class="bi bi-whatsapp whatsapp"></i>(85) 99695-7607</a>
+            <a><i href="mailto:contato@exemplo.com?subject=Agendamento%20de%20consulta&body=Olá,%20gostaria%20de%20mais%20informações." class="bi bi-envelope-fill email"
+                    aria-label="Enviar mensagem por E-mail para Débora"></i>
+                deboram.fisioterapia@gmail.com</a>
+            <a href="https://wa.me/85996957607" aria-label="Enviar mensagem para o WhatsApp da Débora"><i class="bi bi-whatsapp whatsapp"></i>(85) 99695-7607</a>
             <a
-                href="https://www.instagram.com/debora.queiroz31?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                href="https://www.instagram.com/debora.queiroz31?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Ir para o Instagram da Débora"><i
                     class="bi bi-instagram instagram"></i>@debora.queiroz31</a>
         </div>
         <div class="outros">
