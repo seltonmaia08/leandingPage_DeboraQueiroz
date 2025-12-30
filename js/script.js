@@ -88,3 +88,13 @@ alternarContraste.addEventListener('click', (event) => {
     logoFooter.src = `${imageURLFooter[index]}`;
 
 })
+
+//clicar no logo do header e voltar pro topo
+
+const home = document.getElementById("logo-header"); 
+home.addEventListener("click", function () { 
+    window.scrollTo({ 
+        top: 0, 
+        behavior: "smooth" 
+    }); 
+});

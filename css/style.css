@@ -138,6 +138,7 @@ header {
 
 header img {
     width: 20rem;
+    cursor: pointer;
 }
 
 header nav {
@@ -225,6 +226,16 @@ footer img {
 
 .dropdown-menu a {
     color: var(--color-primary);
+}
+
+/*estado da setinha quando abre*/
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.dropdown.active .arrow {
+  transform: rotate(180deg);
 }
 
 /* estado aberto */
