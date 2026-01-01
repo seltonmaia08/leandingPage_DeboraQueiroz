@@ -454,7 +454,6 @@ footer img {
 .btn_CTA:hover {
     background-color: var(--color-primary);
     border: 2px solid var(--color-secondary);
-    box-shadow: 0px 0px 100px 10px var(--color-secondary);
 }
 
 /* =========================
@@ -763,7 +762,6 @@ footer img {
 .btn_accessibility:hover {
     background-color: var(--color-primary);
     border: 2px solid var(--color-secondary);
-    box-shadow: 0px 0px 100px 10px var(--color-secondary);
 }
 
 .options-accessibility a:hover{
