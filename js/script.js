@@ -64,7 +64,7 @@ aumentarFonte.addEventListener('click', (event) => {
     else {
         aumentarFonte.innerHTML = 'Aa +';
         document.body.classList.remove('fonte-grande');
-
+        
     }
 })
 
@@ -82,7 +82,7 @@ const alternarContraste = document.querySelector('#contraste');
 alternarContraste.addEventListener('click', (event) => {
     event.preventDefault();
     document.body.classList.toggle('alto-contraste');
-
+    
     const index = document.body.classList.contains('alto-contraste') ? 1 : 0;
     logoHeader.src = `${imageURLHeader[index]}`;
     logoFooter.src = `${imageURLFooter[index]}`;
@@ -91,10 +91,35 @@ alternarContraste.addEventListener('click', (event) => {
 
 //clicar no logo do header e voltar pro topo
 
-const home = document.getElementById("logo-header"); 
-home.addEventListener("click", function () { 
-    window.scrollTo({ 
-        top: 0, 
-        behavior: "smooth" 
-    }); 
+const home = document.getElementById("logo-header");
+home.addEventListener("click", function (){
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
+
+// Resposividade - menu
+
+//Abrir menu
+const menuToggle = document.querySelector('#open-menu')
+const menuHamburger = document.querySelector('.menu-hamburger')
+menuToggle.addEventListener("click", () => {
+    console.log('Botão clicado')
+    menuHamburger.classList.add('active')
+})
+
+//Fechar menu
+const closeMenu = document.querySelector('.close-menu')
+closeMenu.addEventListener('click', () => {
+    menuHamburger.classList.remove('active')
+})
+
+//fechar menu ao clicar no link
+const linkACloseMenu =  document.querySelectorAll('.link-menu')
+linkACloseMenu.forEach(link_a => {
+    link_a.addEventListener('click', () => {
+        menuHamburger.classList.remove('active')
+    })
+
+})

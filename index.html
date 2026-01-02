@@ -12,11 +12,33 @@
 
 <body>
 
+    <!-- Menu para smartphone -->
+    <div class="menu-hamburger" aria-hidden="true">
+        <div class="content-menu">
+            <nav class="menu" aria-label="Menu principal">
+                <button class="close-menu" aria-label="Fechar menu hamburger">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+                <a class="link-menu" href="#assimetria">Assimetria</a>
+                <a class="link-menu" href="#torcicolo">Torcicolo</a>
+                <a class="link-menu" href="#como-funciona">Como funciona</a>
+                <a class="link-menu" href="#relatos">Relatos</a>
+                <a class="link-menu" href="#sobre">Sobre</a>
+                <a class="link-menu" href="#contatos">Contatos</a>
+            </nav>
+        </div>
+    </div>
+
     <header>
+        <button id="open-menu" class="open-menu" aria-label="Abre menu hamburger"><i class="bi bi-list"></i></button>
         <img id="logo-header" alt="Logo Débora Queiroz Cabeçalho">
+
+        <!-- Menu para desktop e tablet -->
         <nav>
             <div class="dropdown">
-                <a class="dropdown-btn" aria-label="Este botão abre um menu suspenso">Tratamentos <span class="arrow"><i class="bi bi-chevron-down"></i></span></a>
+                <a class="dropdown-btn" aria-label="Este botão abre um menu suspenso">Tratamentos <span class="arrow"><i
+                            class="bi bi-chevron-down"></i></span></a>
                 <div class="dropdown-menu">
                     <a href="#assimetria"
                         aria-label="Este botão leva para a sessão de o que é assimetria">Assimetria</a>
@@ -43,13 +65,13 @@
             <div class="card_apresentation">
                 <!-- <p>Cuidar desde o início faz toda a diferença</p> -->
                 <h1>Cuidado fisioterapêutico especializado para o desenvolvimento saudável do seu bebê.</h1>
+                <img src="./assets/img/debora_img_show.png" alt="imagem de Débora reailzando um atendimento.">
                 <p class="descritivo">Atendimento domiciliar humanizado, focado no desenvolvimento saudável do bebê, com
                     acompanhamento
                     individualizado e orientação contínua à família.</p>
                 <a class="btn_CTA" href="#contatos"
                     aria-label="Este botão leva para a rodapé onde se encontra os meios de contato com a Débora">Contatos</a>
             </div>
-            <img src="./assets/img/debora_img_show.png" alt="imagem de Débora reailzando um atendimento.">
         </section>
 
         <section id="assimetria" class="assimetria">
@@ -124,11 +146,6 @@
             </div>
         </section>
 
-        <section id="como-funciona" class="como-funciona">
-            <h2>Como funciona?</h2>
-            <img src="./assets/img/debora_procedimento.png" alt="Imagem de Débora realizando o procedimento">
-
-        </section>
 
         <section id="relatos" class="c-relatos">
             <h2>Relatos</h2>
@@ -205,7 +222,7 @@
             <h2>Sobre mim</h2>
 
             <div class="quem-sou">
-                <img src="./assets/img/debora_atendimento_1.png" alt="Débora segunrando uma criança em seu colo">
+                <img src="./assets/img/debora_sobre.png" alt="Débora segunrando uma criança em seu colo">
                 <div class="content-text">
                     <p>
                         "Cristã, casada e fisioterapeuta que ama o que faz. Sou apaixonada por crianças! Aonde eu
@@ -258,6 +275,37 @@
                     </p>
                 </div>
             </div>
+
+        </section>
+        <section id="atendimento" class="atendimento">
+            <h2>Atendimento domiciliar</h2>
+            <div class="card_locais">
+                <div class="locais">
+                    <p>Banabuiú - CE</p>
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="locais">
+                    <p>Ibaretama - CE</p>
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="locais">
+                    <p>Ibicuitinga - CE</p>
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="locais">
+                    <p>Quixadá - CE</p>
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="locais">
+                    <p>Quixeramobim - CE</p>
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="locais">
+                    <p>E Sertão Central</p>
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+            </div>
+
         </section>
 
         <!--Accessibilidade-->
@@ -290,7 +338,8 @@
                     class="bi bi-instagram instagram"></i>@debora.queiroz31</a>
         </div>
         <div class="outros">
-            <p><i class="bi bi-c-circle copyright"></i> <span id="year"></span> Débora Queiroz. Todos os direitos
+            <p>Copyright <i class="bi bi-c-circle copyright"></i> <span id="year"></span> Débora Queiroz. Todos os
+                direitos
                 reservados.</p>
         </div>
     </footer>

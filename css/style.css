@@ -37,9 +37,12 @@
 }
 
 body {
+    max-width: 2000px;
+    width: 100%;
     font-family: verdana;
     background-color: var(--color-white);
     color: var(--color-black);
+    overflow-x: hidden;
 }
 
 a {
@@ -59,6 +62,7 @@ h1 {
     line-height: 1.2;
     width: 100%;
 }
+
 h2 {
     font-family: 'diphylleia';
     font-size: 3rem;
@@ -123,6 +127,7 @@ body.alto-contraste .copyright {
 header {
     position: fixed;
     top: 0;
+    max-width: 2000px;
     width: 100%;
     z-index: 10;
 
@@ -130,7 +135,7 @@ header {
     justify-content: space-around;
     align-items: center;
 
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #ffffffb3;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-secondary);
 }
@@ -236,7 +241,7 @@ footer img {
 }
 
 .dropdown.active .arrow {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 /* estado aberto */
@@ -247,9 +252,95 @@ footer img {
 }
 
 /* =========================
+   menu hamburger
+========================= */
+.open-menu {
+    border: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    position: absolute;
+    z-index: 90;
+    top: 1rem;
+    left: 1rem;
+
+    color: var(--color-primary);
+
+    display: none;
+    visibility: hidden;
+
+}
+
+.menu-hamburger {
+    position: fixed;
+    inset: 0;
+    z-index: 98;
+
+    max-width: 800px;
+    width: 100%;
+
+    display: none;
+    overflow: hidden;
+}
+
+.content-menu {
+    background-color: #00000006;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    max-width: 800px;
+    width: 100%;
+    height: 250vh;
+}
+
+.menu {
+    max-width: 400px;
+    width: 80%;
+    height: 100%;
+    padding: 1rem;
+
+    background-color: var(--color-pink-light);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.close-menu {
+    border: none;
+    color: var(--color-primary);
+    font-size: 2rem;
+
+    width: 15%;
+    background-color: transparent;
+}
+
+.menu a {
+    width: 100%;
+    text-align: start;
+    padding: 1.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--color-primary);
+
+}
+
+.menu-hamburger.active {
+    display: block;
+}
+
+.menu-hamburger.active .menu {
+    transform: translateX(0);
+}
+
+/* =========================
    Site em  construção
 ========================= */
-.site-construcao{
+.site-construcao {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -269,7 +360,7 @@ footer img {
     letter-spacing: 1px;
 }
 
-.site-construcao i{
+.site-construcao i {
     font-size: 10rem;
     position: relative;
     top: 2rem;
@@ -283,6 +374,7 @@ footer img {
     50% {
         transform: rotate(15deg);
     }
+
     100% {
         transform: rotate(-15deg);
     }
@@ -297,6 +389,7 @@ footer img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 /* Text block */
@@ -316,11 +409,9 @@ footer img {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    border-radius: 2rem;
-    padding: 4rem 4rem 8rem 4rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem 4rem 8rem 18rem;
 }
 
 .card_apresentation {
@@ -328,14 +419,6 @@ footer img {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-
-    position: relative;
-    left: 5rem;
-}
-
-.card_apresentation h2 {
-    width: 85%;
-    margin-left: -4rem;
 }
 
 .descritivo {
@@ -345,10 +428,11 @@ footer img {
 }
 
 .apresentation img {
-    width: 36rem;
-    height: 36rem;
-    position: relative;
-    right: 5rem;
+    width: 40rem;
+    height: 40rem;
+    position: absolute;
+    right: 18rem;
+    top: 65rem;
 }
 
 .card_apresentation p {
@@ -356,15 +440,6 @@ footer img {
     font-size: 12pt;
     color: var(--color-primary);
 
-}
-
-.card_apresentation h2 {
-    width: 85%;
-
-    font-family: 'diphylleia';
-    font-size: 3rem;
-    line-height: 1.2;
-    color: var(--color-primary);
 }
 
 /* =========================
@@ -382,7 +457,7 @@ footer img {
 
 .assimetria img {
     width: 36rem;
-   
+
 }
 
 .assimetria-infor {
@@ -392,6 +467,10 @@ footer img {
     gap: 5rem;
 }
 
+.assimetria h2 {
+    color: var(--color-blue-primary);
+}
+
 .torcicolo {
     display: flex;
     flex-direction: column;
@@ -399,7 +478,7 @@ footer img {
     align-items: center;
 
     padding: 4rem;
-    background-color: var(--color-white);
+    background-color: var(--color-pink-light);
 }
 
 .card_torcicolo {
@@ -409,7 +488,7 @@ footer img {
     gap: 2rem;
 }
 
-.infor{
+.infor {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -420,14 +499,14 @@ footer img {
     width: 36rem;
 }
 
-.como-funciona{
+.como-funciona {
     width: 100%;
     min-height: 100vh;
     background-color: var(--color-pink-light);
     padding: 4rem;
 }
 
-.como-funciona img{
+.como-funciona img {
     width: 36rem;
     height: 36rem;
 }
@@ -546,12 +625,16 @@ footer img {
     flex-direction: row;
     justify-content: center;
 
-    height: 100vh;
 }
 
 .content-text {
     width: 45%;
     color: var(--color-black);
+
+}
+
+.c-quem h2 {
+    color: var(--color-blue-primary);
 
 }
 
@@ -571,7 +654,7 @@ footer img {
 .cards-especializacao {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-white);
+    background-color: var(--color-pink-light);
     padding: 4rem;
     min-height: 100vh;
 }
@@ -592,9 +675,9 @@ footer img {
     display: flex;
     justify-content: center;
 
-    background-color: var(--color-pink-light);
+    background-color: var(--color-white);
     border-radius: 2rem;
-    border: 1px solid transparent;
+    border: 1px solid var(--color-primary);
 
     transition: transform 0.3s ease-in-out;
 }
@@ -614,6 +697,61 @@ footer img {
 
 .especializacao p {
     color: var(--color-black);
+}
+
+.atendimento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 4rem 4rem 8rem 4rem;
+}
+
+.card_locais {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.locais {
+    background-color: var(--color-pink-light);
+    width: 30%;
+    height: 5rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 2rem;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid var(--color-secondary);
+
+
+}
+
+.locais i {
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+.locais:hover {
+    transform: scale(1.09);
+    box-shadow: 0 10px 40px 0px #c2c2c2;
+}
+
+.locais:nth-child(even) {
+    background-color: var(--color-blue-light);
+    border: 1px solid var(--color-blue-secondary);
+}
+
+.locais:nth-child(even) i {
+    color: var(--color-blue-primary);
 }
 
 /* =========================
@@ -728,7 +866,7 @@ footer img {
     font-size: 24pt;
     color: var(--color-white);
 
-    transition: background-color 3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .options-accessibility {
@@ -764,7 +902,7 @@ footer img {
     border: 2px solid var(--color-secondary);
 }
 
-.options-accessibility a:hover{
+.options-accessibility a:hover {
     transform: scale(1.2);
 }
 
@@ -779,3 +917,291 @@ footer img {
 /* =========================
    RESPONSIVIDADE
 ========================= */
+
+/* Smartphone */
+@media (max-width: 800px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    h1,
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 14pt;
+    }
+
+    /*cabeçalho*/
+    header {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+
+    header img {
+        width: 12rem;
+    }
+
+    header nav {
+        display: none;
+        visibility: hidden;
+    }
+
+    /* footer */
+
+    footer {
+        max-width: 800px;
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .open-menu {
+        display: block;
+        visibility: visible;
+    }
+
+    /* site em construção */
+
+    .site-construcao {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        max-width: 800px;
+        height: 30vh;
+    }
+
+    .site-construcao h2 {
+        font-size: 2rem;
+    }
+
+    .site-construcao i {
+        font-size: 5rem;
+        position: relative;
+        top: 5rem;
+        right: 5rem;
+    }
+
+    /* main content */
+    .content {
+        max-width: 800px;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Apresentation */
+    .apresentation {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
+        max-width: 800px;
+        width: 100%;
+
+    }
+
+    .card_apresentation {
+        max-width: 800px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card_apresentation h1,
+    .card_apresentation p {
+        max-width: 800px;
+        width: 100%;
+
+    }
+
+    .card_apresentation p {
+        font-size: 14pt;
+        margin-top: 2rem;
+    }
+
+    .apresentation img {
+        width: 26rem;
+        height: 26rem;
+        margin: 0;
+        position: relative;
+        top: 2rem;
+        left: 0.5rem;
+    }
+
+    .assimetria,
+    .torcicolo,
+    .c-relatos,
+    .c-quem,
+    .cards-especializacao {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        padding-bottom: 8rem;
+    }
+
+    .assimetria-infor,
+    .card_torcicolo,
+    .relatos,
+    .quem-sou {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .card_torcicolo {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .infor,
+    .content-text {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .assimetria-infor h2 {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .assimetria-infor img {
+        width: 26rem;
+        height: 26rem;
+    }
+
+    .card_torcicolo img {
+        width: 26rem;
+        height: auto;
+    }
+
+    .quem-sou img {
+        width: 26rem;
+        height: auto;
+        padding-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .c-quem h2 {
+        font-size: 2rem;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .card-container_esp,
+    .card-experiencias {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .especializacao {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .atendimento {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .atendimento {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .card_locais {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .locais {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .accessibility {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 10;
+    }
+
+    .footer-logo {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .footer-logo img {
+        width: 18rem;
+    }
+
+    .contatos {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .outros {
+        max-width: 800px;
+        width: 100%;
+    }
+
+}
