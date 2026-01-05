@@ -74,6 +74,7 @@ h2 {
 
 p {
     font-size: 12pt;
+    text-align: justify;
 }
 
 body.fonte-grande p {
@@ -338,49 +339,6 @@ footer img {
 }
 
 /* =========================
-   Site em  construção
-========================= */
-.site-construcao {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-image: url('../assets/img/grafismo.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-position-y: -8rem;
-}
-
-.site-construção h2 {
-    color: #BC155B;
-    font-size: 3rem;
-    letter-spacing: 1px;
-}
-
-.site-construcao i {
-    font-size: 10rem;
-    position: relative;
-    top: 2rem;
-    right: 35rem;
-    color: #BC155B;
-    transform: rotate(0deg);
-    animation: rotateIcon 2s ease-in-out infinite alternate;
-}
-
-@keyframes rotateIcon {
-    50% {
-        transform: rotate(15deg);
-    }
-
-    100% {
-        transform: rotate(-15deg);
-    }
-}
-
-/* =========================
    MAIN CONTENT
 ========================= */
 .content {
@@ -423,8 +381,8 @@ footer img {
 
 .descritivo {
     width: 60%;
-    margin-top: 0.5rem;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .apresentation img {
@@ -432,7 +390,7 @@ footer img {
     height: 40rem;
     position: absolute;
     right: 4rem;
-    top: 50rem;
+    top: 6rem;
 }
 
 .card_apresentation p {
@@ -699,61 +657,6 @@ footer img {
     color: var(--color-black);
 }
 
-.atendimento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 4rem 4rem 8rem 4rem;
-}
-
-.card_locais {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-
-}
-
-.locais {
-    background-color: var(--color-pink-light);
-    width: 30%;
-    height: 5rem;
-    padding: 4rem;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border-radius: 2rem;
-    transition: transform 0.3s ease-in-out;
-    border: 1px solid var(--color-secondary);
-
-
-}
-
-.locais i {
-    font-size: 2rem;
-    color: var(--color-primary);
-}
-
-.locais:hover {
-    transform: scale(1.09);
-    box-shadow: 0 10px 40px 0px #c2c2c2;
-}
-
-.locais:nth-child(even) {
-    background-color: var(--color-blue-light);
-    border: 1px solid var(--color-blue-secondary);
-}
-
-.locais:nth-child(even) i {
-    color: var(--color-blue-primary);
-}
-
 /* =========================
    FOOTER
 ========================= */
@@ -773,6 +676,8 @@ footer img {
     font-weight: 600;
     letter-spacing: 1px;
     font-family: 'Diphylleia';
+    color: var(--color-white);
+    text-align: left;
 }
 
 .outros {
@@ -787,6 +692,7 @@ footer img {
 .outros p {
     font-size: 10pt;
     font-family: 'Diphylleia';
+    color: var(--color-white);
 }
 
 .contatos {
@@ -801,7 +707,7 @@ footer img {
 .contatos a {
     font-size: 14pt;
     font-weight: 500;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 
@@ -824,10 +730,6 @@ footer img {
 
 .icon b {
     margin-right: 1rem;
-}
-
-.star {
-    color: var(--color-primary);
 }
 
 .copyright,
@@ -973,29 +875,6 @@ footer img {
     .open-menu {
         display: block;
         visibility: visible;
-    }
-
-    /* site em construção */
-
-    .site-construcao {
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        flex-direction: row;
-        width: 100%;
-        max-width: 800px;
-        height: 30vh;
-    }
-
-    .site-construcao h2 {
-        font-size: 2rem;
-    }
-
-    .site-construcao i {
-        font-size: 5rem;
-        position: relative;
-        top: 5rem;
-        right: 5rem;
     }
 
     /* main content */

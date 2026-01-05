@@ -22,15 +22,15 @@ dropdownLinks.forEach(link => {
     });
 });
 
-// add icones de estrelas nos relatos
-const icons = document.querySelectorAll(".icon");
-icons.forEach(container => {
-    for (let i = 0; i < 5; i++) {
-        const iconStar = document.createElement('i');
-        iconStar.classList.add('bi', 'bi-star-fill', 'star');
-        container.appendChild(iconStar);
-    }
-})
+// // add icones de estrelas nos relatos
+// const icons = document.querySelectorAll(".icon");
+// icons.forEach(container => {
+//     for (let i = 0; i < 5; i++) {
+//         const iconStar = document.createElement('i');
+//         iconStar.classList.add('bi', 'bi-star-fill', 'star');
+//         container.appendChild(iconStar);
+//     }
+// })
 
 // pegar o ano atual
 const year = new Date();
