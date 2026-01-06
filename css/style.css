@@ -710,6 +710,10 @@ footer img {
     color: var(--color-white);
 }
 
+.contatos p{
+    padding-bottom: 1rem;
+    color: var(--color-white);
+}
 
 
 /* =========================
