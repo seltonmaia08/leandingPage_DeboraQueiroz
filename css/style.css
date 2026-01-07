@@ -90,7 +90,7 @@ body.fonte-grande a {
 }
 
 body.alto-contraste {
-    background-color: #000000 !important;
+    background-color: var(--color-black) !important;
     color: #FFFFFF !important;
 }
 
@@ -106,7 +106,7 @@ body.alto-contraste h1,
 body.alto-contraste h2,
 body.alto-contraste p,
 body.alto-contraste a {
-    background-color: #000000 !important;
+    background-color: var(--color-black) !important;
     color: #FFFFFF !important;
     background-image: none !important;
     border-color: #FFFFFF !important;
@@ -115,13 +115,12 @@ body.alto-contraste a {
 body.alto-contraste .btn_CTA, body.alto-contraste .btn_accessibility {
     background-color: var(--color-white) !important;
     border: 2px solid var(--color-white);
-    color: #000 !important;
+    color: var(--color-black) !important;
 }
 
 body.alto-contraste .btn_CTA:hover, body.alto-contraste .btn_accessibility:hover {
     background-color: #ffff00 !important;
-    
-    color: #000 !important;
+    color: var(--color-black) !important;
 }
 
 body.alto-contraste .star,
@@ -129,7 +128,7 @@ body.alto-contraste .instagram,
 body.alto-contraste .whatsapp,
 body.alto-contraste .email,
 body.alto-contraste .copyright {
-    color: #FFFFFF;
+    color: var(--color-white);
 }
 
 
@@ -264,7 +263,7 @@ footer img {
 }
 
 /* =========================
-   menu hamburger
+   MENU HAMBURGER
 ========================= */
 .open-menu {
     border: none;
@@ -279,7 +278,6 @@ footer img {
 
     display: none;
     visibility: hidden;
-
 }
 
 .menu-hamburger {
@@ -338,7 +336,6 @@ footer img {
     padding: 1.5rem;
     font-size: 1rem;
     border-bottom: 1px solid var(--color-primary);
-
 }
 
 .menu-hamburger.active {
@@ -408,7 +405,6 @@ footer img {
     font-family: verdana;
     font-size: 12pt;
     color: var(--color-primary);
-
 }
 
 /* =========================
@@ -569,8 +565,6 @@ footer img {
     overflow: visible;
 }
 
-
-
 .relatos:nth-child(even) {
     background-color: var(--color-pink-light);
     border: 1px solid var(--color-secondary);
@@ -599,12 +593,10 @@ footer img {
 .content-text {
     width: 45%;
     color: var(--color-black);
-
 }
 
 .c-quem h2 {
     color: var(--color-blue-primary);
-
 }
 
 .content-text p {
@@ -726,7 +718,6 @@ footer img {
     color: var(--color-white);
 }
 
-
 /* =========================
    ICONS
 ========================= */
@@ -786,7 +777,6 @@ footer img {
     transition: background-color 0.3s ease;
 }
 
-
 .options-accessibility {
     width: 100%;
     height: auto;
@@ -803,9 +793,7 @@ footer img {
     visibility: hidden;
     transform: translateY(20px);
     transition: all 0.3s ease;
-
 }
-
 
 .options-accessibility a {
     font-size: 14pt;
@@ -836,7 +824,7 @@ footer img {
    RESPONSIVIDADE
 ========================= */
 
-/* Smartphone */
+/* SMARTPHONE */
 @media (max-width: 800px) {
 
     body {
@@ -909,7 +897,6 @@ footer img {
 
         max-width: 800px;
         width: 100%;
-
     }
 
     .card_apresentation {
@@ -925,7 +912,6 @@ footer img {
     .card_apresentation p {
         max-width: 800px;
         width: 100%;
-
     }
 
     .card_apresentation p {
@@ -1051,6 +1037,7 @@ footer img {
         padding: 2rem;
     }
 
+    /* locais retirados
     .card_locais {
         max-width: 800px;
         width: 100%;
@@ -1067,7 +1054,7 @@ footer img {
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
-    }
+    }*/
 
     .accessibility {
         position: fixed;
