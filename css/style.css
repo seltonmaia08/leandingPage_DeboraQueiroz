@@ -94,6 +94,10 @@ body.alto-contraste {
     color: #FFFFFF !important;
 }
 
+body.alto-contraste header nav a::after {
+    background-color: #ffff00 ;
+}
+
 body.alto-contraste section,
 body.alto-contraste header,
 body.alto-contraste footer,
@@ -108,8 +112,15 @@ body.alto-contraste a {
     border-color: #FFFFFF !important;
 }
 
-body.alto-contraste .btn_CTA {
+body.alto-contraste .btn_CTA, body.alto-contraste .btn_accessibility {
+    background-color: var(--color-white) !important;
+    border: 2px solid var(--color-white);
+    color: #000 !important;
+}
+
+body.alto-contraste .btn_CTA:hover, body.alto-contraste .btn_accessibility:hover {
     background-color: #ffff00 !important;
+    
     color: #000 !important;
 }
 
@@ -774,6 +785,7 @@ footer img {
 
     transition: background-color 0.3s ease;
 }
+
 
 .options-accessibility {
     width: 100%;
