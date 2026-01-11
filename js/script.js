@@ -61,8 +61,8 @@ aumentarFonte.addEventListener('click', (event) => {
 // alternar o contraste
 
 const imageAltoContraste = './assets/img/logo_v-negativa.svg';
-const imageLogoHeader = './assets/img/Logo_horizontal.svg'
-const imageLogoFooter = './assets/img/Logo_bgPink.svg'
+const imageLogoHeader = './assets/img/logo_horizontal.svg'
+const imageLogoFooter = './assets/img/logo_bg_pink.svg'
 
 const logoHeader = document.querySelector('#logo-header');
 const logoFooter = document.querySelector('#logo-footer');
