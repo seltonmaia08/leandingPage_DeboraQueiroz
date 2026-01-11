@@ -22,16 +22,6 @@ dropdownLinks.forEach(link => {
     });
 });
 
-// // add icones de estrelas nos relatos
-// const icons = document.querySelectorAll(".icon");
-// icons.forEach(container => {
-//     for (let i = 0; i < 5; i++) {
-//         const iconStar = document.createElement('i');
-//         iconStar.classList.add('bi', 'bi-star-fill', 'star');
-//         container.appendChild(iconStar);
-//     }
-// })
-
 // pegar o ano atual
 const year = new Date();
 const spanYear = document.querySelector('#year').textContent = year.getFullYear();
@@ -64,35 +54,38 @@ aumentarFonte.addEventListener('click', (event) => {
     else {
         aumentarFonte.innerHTML = 'Aa +';
         document.body.classList.remove('fonte-grande');
-        
+
     }
 })
 
 // alternar o contraste
 
-const imageURLHeader = ['./assets/img/Logo_horizontal.svg', './assets/img/logo_v-negativa.svg'];
-const imageURLFooter = ['./assets/img/Logo_bgPink.svg', './assets/img/logo_v-negativa.svg'];
+const imageAltoContraste = './assets/img/logo_v-negativa.svg';
+const imageLogoHeader = './assets/img/Logo_horizontal.svg'
+const imageLogoFooter = './assets/img/Logo_bgPink.svg'
 
 const logoHeader = document.querySelector('#logo-header');
 const logoFooter = document.querySelector('#logo-footer');
-logoHeader.src = imageURLHeader[0]
-logoFooter.src = imageURLFooter[0]
 
 const alternarContraste = document.querySelector('#contraste');
 alternarContraste.addEventListener('click', (event) => {
     event.preventDefault();
-    document.body.classList.toggle('alto-contraste');
+    const altoContraste = document.body.classList.toggle('alto-contraste');
     
-    const index = document.body.classList.contains('alto-contraste') ? 1 : 0;
-    logoHeader.src = `${imageURLHeader[index]}`;
-    logoFooter.src = `${imageURLFooter[index]}`;
-
+    if(altoContraste){
+        logoHeader.src = `${imageAltoContraste}`
+        logoFooter.src = `${imageAltoContraste}`
+    } else {
+        logoHeader.src = `${imageLogoHeader}`
+        logoFooter.src = `${imageLogoFooter}`
+    }
+    
 })
 
 //clicar no logo do header e voltar pro topo
 
 const home = document.getElementById("logo-header");
-home.addEventListener("click", function (){
+home.addEventListener("click", function () {
     window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -116,7 +109,7 @@ closeMenu.addEventListener('click', () => {
 })
 
 //fechar menu ao clicar no link
-const linkACloseMenu =  document.querySelectorAll('.link-menu')
+const linkACloseMenu = document.querySelectorAll('.link-menu')
 linkACloseMenu.forEach(link_a => {
     link_a.addEventListener('click', () => {
         menuHamburger.classList.remove('active')
