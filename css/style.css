@@ -83,6 +83,7 @@ body.fonte-grande p {
 
 body.fonte-grande h1 {
     font-size: 5rem;
+    width: 100%;
 }
 
 body.fonte-grande a {
