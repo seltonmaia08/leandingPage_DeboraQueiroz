@@ -649,6 +649,8 @@ footer img {
 }
 
 .especializacao {
+    /*
+    antes
     width: 20%;
     min-height: 15rem;
     padding: 2rem;
@@ -662,7 +664,35 @@ footer img {
     border: 1px solid var(--color-primary);
 
     transition: transform 0.3s ease-in-out;
+    
+    */
+    width: 30%;
+    min-height: 15rem;
+    padding: 2rem;
+    margin: 1rem;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+
+    background-color: var(--color-white);
+    border-radius: 2rem;
+    border: 1px solid var(--color-primary);
+
+    transition: transform 0.3s ease-in-out;
 }
+
+.simb {
+    width: 50px;     
+    height: auto;     
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+    
+    }
 
 .card-experiencias {
     display: flex;
@@ -1056,6 +1086,8 @@ footer img {
         justify-content: center;
     }
 
+    
+
     .atendimento {
         display: flex;
         flex-direction: column;
@@ -1104,8 +1136,35 @@ footer img {
         width: 100%;
     }
 
+<<<<<<< HEAD
     .outros p{
         width: 90%;
     }
 
+=======
+}
+
+.secao-video {
+    width: 100%;
+    padding: 60px ;
+    line-height: 0;     
+    overflow: hidden;
+
+}
+
+
+.video-full {
+    width: 100%;         
+    height: auto;       
+    display: block;
+    object-fit: contain; 
+    border-radius: 20px;
+}
+
+@media (min-width: 2000px) {
+    .video-full {
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+>>>>>>> d10281b (adicionado símbolos e vídeo)
 }
