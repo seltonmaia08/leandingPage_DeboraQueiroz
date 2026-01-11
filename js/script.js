@@ -60,7 +60,7 @@ aumentarFonte.addEventListener('click', (event) => {
 
 // alternar o contraste
 
-const imageAltoContraste = './assets/img/logo_v-negativa.svg';
+const imageAltoContraste = './assets/img/logo_v_negativa.svg';
 const imageLogoHeader = './assets/img/logo_horizontal.svg'
 const imageLogoFooter = './assets/img/logo_bg_pink.svg'
 
