@@ -173,7 +173,7 @@ header {
 }
 
 header img {
-    width: 20rem;
+    width: 13rem;
     cursor: pointer;
 }
 
@@ -873,6 +873,21 @@ footer img {
     transform: translateY(0);
 }
 
+.secao-video {
+    width: 100%;
+    padding: 4rem 8rem 4rem 8rem;
+    line-height: 0;   
+    overflow: hidden;
+    
+}
+.video-full {
+    width: 100%;         
+    height: 90vh;      
+    display: block;
+    object-fit: cover; 
+    border-radius: 2rem;
+}
+
 
 /* =========================
    RESPONSIVIDADE
@@ -929,9 +944,9 @@ footer img {
         display: none;
         visibility: hidden;
     }
-
+    
     /* footer */
-
+    
     footer {
         max-width: 800px;
         width: 100%;
@@ -942,12 +957,12 @@ footer img {
         align-items: center;
         padding: 2rem;
     }
-
+    
     .open-menu {
         display: block;
         visibility: visible;
     }
-
+    
     /* main content */
     .content {
         max-width: 800px;
@@ -961,15 +976,15 @@ footer img {
         display: flex;
         flex-direction: column-reverse;
         align-items: flex-start;
-
+        
         max-width: 800px;
         width: 100%;
     }
-
+    
     .card_apresentation {
         max-width: 800px;
         width: 100%;
-
+        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -985,7 +1000,7 @@ footer img {
         font-size: 14pt;
         margin-top: 2rem;
     }
-
+    
     .apresentation img {
         width: 26rem;
         height: 26rem;
@@ -1008,7 +1023,7 @@ footer img {
         padding: 2rem;
         padding-bottom: 8rem;
     }
-
+    
     .assimetria-infor,
     .card_torcicolo,
     .relatos,
@@ -1020,7 +1035,7 @@ footer img {
         align-items: start;
         justify-content: center;
     }
-
+    
     .card_torcicolo {
         display: flex;
         flex-direction: column-reverse;
@@ -1037,29 +1052,29 @@ footer img {
         align-items: center;
         justify-content: center;
     }
-
+    
     .assimetria-infor h2 {
         font-size: 2rem;
         width: 100%;
     }
-
+    
     .assimetria-infor img {
         width: 26rem;
         height: 26rem;
     }
-
+    
     .card_torcicolo img {
         width: 26rem;
         height: auto;
     }
-
+    
     .quem-sou img {
         width: 26rem;
         height: auto;
         padding-top: 0;
         margin-bottom: 2rem;
     }
-
+    
     .c-quem h2 {
         font-size: 2rem;
         width: 100%;
@@ -1143,22 +1158,6 @@ footer img {
 
 }
 
-.secao-video {
-    width: 100%;
-    padding: 60px ;
-    line-height: 0;     
-    overflow: hidden;
-
-}
-
-
-.video-full {
-    width: 100%;         
-    height: auto;       
-    display: block;
-    object-fit: contain; 
-    border-radius: 20px;
-}
 
 @media (min-width: 2000px) {
     .video-full {
