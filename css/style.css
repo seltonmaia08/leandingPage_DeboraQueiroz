@@ -73,7 +73,7 @@ h2 {
 }
 
 p {
-    font-size: 12pt;
+    font-size: 13pt;
     text-align: justify;
 }
 
@@ -148,7 +148,8 @@ body.alto-contraste .star,
 body.alto-contraste .instagram,
 body.alto-contraste .whatsapp,
 body.alto-contraste .email,
-body.alto-contraste .copyright {
+body.alto-contraste .copyright,
+body.alto-contraste .simb {
     color: var(--color-white);
 }
 
@@ -803,6 +804,9 @@ footer img {
 .whatsapp {
     color: var(--color-white);
     padding: 0.8rem;
+}
+.simb {
+    color: var(--color-primary) !important;
 }
 
 
