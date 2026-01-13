@@ -415,11 +415,10 @@ footer img {
 }
 
 .apresentation img {
-    width: 40rem;
-    height: 40rem;
+    width: 36rem;
     position: absolute;
-    right: 1rem;
-    top: 6rem;
+    right: 8rem;
+    top: 8rem;
 }
 
 .card_apresentation p {
