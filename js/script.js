@@ -116,3 +116,122 @@ linkACloseMenu.forEach(link_a => {
     })
 
 })
+
+/*ALTERAÇÕES COM O JOHN*/
+
+async function requisicao_fichas() {
+
+    let requisicao = await fetch("https://raw.githubusercontent.com/john-sz/APIcoments/main/fichas.json");
+    let dados_json = await requisicao.json();
+
+    cartoes(dados_json);
+}
+
+requisicao_fichas();
+
+let fichas = document.getElementById("fichas"); // é o container das fichas
+
+function cartoes(dados) {
+
+    for (let i = 0; i < dados.length; i++) {
+
+        //criação de variáveis p/ cada cartão ----------------
+        let nome = document.createElement("span");
+        let responsavel = document.createElement("span");
+        let idade = document.createElement("span");
+        let imagem = document.createElement("img");
+        let tratamento = document.createElement("span");
+        let capacete = document.createElement("span");
+        let observacoes = document.createElement("span");
+
+        let cartao = document.createElement("span"); // é o container do cartão (imagem + informações)
+        let informacoes = document.createElement("span"); // é o container das informações (textos)
+
+        // atribuição de variáveis ----------------
+        nome.textContent = dados[i].Bebe;
+        idade.textContent = "Idade: " + dados[i].Idade;
+        responsavel.textContent = "Responsável: " + dados[i].Responsavel;
+        tratamento.textContent = "Tratamento realizado: " + dados[i].Tratamento;
+
+        if(dados[i].Capacete) {capacete.textContent = "Capacete: necessário"}
+        else {capacete.textContent = "Capacete: não necessário"}
+        
+        observacoes.textContent = "Observações: " +  dados[i].Observacoes;
+        
+        imagem.src = dados[i].Foto;
+
+        // atribuição de classes ----------------
+        cartao.classList.add("cartao");
+        informacoes.classList.add("info_cartao");
+        nome.classList.add("cartao_nome");
+        observacoes.classList.add("cartao_observacao");
+        imagem.classList.add("cartao_imagem");
+
+        // colocando os itens nos containters, a imagem vem primeiro ----------------
+        cartao.appendChild(imagem);
+        
+        informacoes.appendChild(nome);
+        informacoes.appendChild(idade);
+        informacoes.appendChild(responsavel);
+        informacoes.appendChild(tratamento);
+        informacoes.appendChild(capacete);
+        informacoes.appendChild(observacoes);
+
+        cartao.appendChild(informacoes);
+        fichas.appendChild(cartao);
+    }
+
+    let cards = fichas.children;
+    const clone = cards[0].cloneNode(true); // clonar o primeiro item para fazer loop infinito
+    fichas.appendChild(clone);
+}
+
+/*DESLOCAMENTO DO CARROSSEL*/
+let indice = 0
+
+let avancar = document.getElementById("avancar");
+let voltar = document.getElementById("voltar");
+
+function alterarPosicao() {
+
+    fichas.style.transform = `translateX(${-69.5 * indice}rem)`;
+}
+
+avancar.addEventListener("click", () => {
+
+    indice += 1;
+    fichas.style.transition = "transform 0.400s ease";
+    alterarPosicao();
+
+    if(indice === 20) {
+
+        setTimeout(() => {
+            
+            fichas.style.transition = "none";
+            indice = 0;
+            alterarPosicao();
+
+        }, 400);        
+    }
+})
+
+voltar.addEventListener("click", () => {
+
+
+    if(indice === 0) {
+
+        fichas.style.transition = "none";
+        indice = 20;
+        alterarPosicao();
+    }
+
+    setTimeout(() => {
+        
+        indice -= 1;
+        fichas.style.transition = "transform 0.4s ease";
+        alterarPosicao();
+
+    }, 10);
+})
+
+/*ALTERAÇÕES COM O JOHN*/

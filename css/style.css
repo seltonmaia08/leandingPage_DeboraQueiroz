@@ -606,6 +606,133 @@ footer img {
     border: 1px solid var(--color-secondary);
 }
 
+/*ALTERAÇÕES COM O JOHN*/
+
+.subtopico {
+
+    font-family: 'diphylleia';
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+
+    justify-content: left;
+
+    color: var(--color-secondary);
+}
+
+.carrossel {
+
+    margin-bottom: 5rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#voltar i {
+
+    background: transparent;
+    font-size: 2rem;
+    padding: 0.3rem;
+    padding-right: 0.4rem;
+
+    color: var(--color-blue-primary);
+    transition: background 0.5s;
+
+    border-radius: 0.5rem;
+}
+
+#voltar i:hover {
+
+    background: var(--color-blue-light);
+    border-radius: 0.5rem;
+}
+
+#avancar i {
+ 
+    background: transparent;
+    font-size: 2rem;
+    padding: 0.3rem;
+    padding-left: 0.4rem;
+
+    color: var(--color-blue-primary);
+    transition: background 0.5s;
+
+    border-radius: 0.5rem;
+}
+
+#avancar i:hover {
+
+    background: var(--color-blue-light);
+    border-radius: 0.5rem;
+}
+
+.janela {
+    width: 69.5rem;
+    overflow: hidden;
+}
+
+.sec_cartao {
+
+    font-size: 0.9rem;
+    font-size: 0.9rem;
+    width: 100%;
+
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.cartao {
+
+    background-color: #FFDBE9;
+    border: 1px solid #FF5C9C;
+    border-radius: 2rem;
+    padding: 1.2rem;
+
+    width: 69.5rem;
+
+    flex-shrink: 0;
+
+    display: flex;
+    gap: 1rem;
+}
+
+.cartao:nth-child(odd) {
+
+    background-color: #cae8f7;
+    border: 1px solid #2DA5E1;
+}
+
+.info_cartao {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cartao_nome {
+
+    margin-bottom: 1rem;
+    font-family: 'Diphylleia';
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cartao_observacao {
+
+    margin-top: 1rem;
+}
+
+.cartao_imagem {
+
+    width: 13rem;
+    height: 12rem;
+    border-radius: 1rem;
+
+}
+
+/*ALTERAÇÕES COM O JOHN*/
+
 /* =========================
    QUEM SOU
 ========================= */
