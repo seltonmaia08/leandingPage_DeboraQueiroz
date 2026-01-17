@@ -187,51 +187,100 @@ function cartoes(dados) {
 }
 
 /*DESLOCAMENTO DO CARROSSEL*/
+
 let indice = 0
 
 let avancar = document.getElementById("avancar");
 let voltar = document.getElementById("voltar");
 
-function alterarPosicao() {
+if(window.innerWidth <= 800) {
 
-    fichas.style.transform = `translateX(${-69.5 * indice}rem)`;
-}
+    function alterarPosicao() {
 
-avancar.addEventListener("click", () => {
+        fichas.style.transform = `translateX(${-40 * indice}rem)`;
+    }
 
-    indice += 1;
-    fichas.style.transition = "transform 0.400s ease";
-    alterarPosicao();
+    avancar.addEventListener("click", () => {
 
-    if(indice === 20) {
+        indice += 1;
+        fichas.style.transition = "transform 0.400s ease";
+        alterarPosicao();
+
+        if(indice === 20) {
+
+            setTimeout(() => {
+                
+                fichas.style.transition = "none";
+                indice = 0;
+                alterarPosicao();
+
+            }, 400);        
+        }
+    })
+
+    voltar.addEventListener("click", () => {
+
+
+        if(indice === 0) {
+
+            fichas.style.transition = "none";
+            indice = 20;
+            alterarPosicao();
+        }
 
         setTimeout(() => {
             
-            fichas.style.transition = "none";
-            indice = 0;
+            indice -= 1;
+            fichas.style.transition = "transform 0.4s ease";
             alterarPosicao();
 
-        }, 400);        
-    }
-})
+        }, 10);
+    })
+}
 
-voltar.addEventListener("click", () => {
+else {
 
+    function alterarPosicao() {
 
-    if(indice === 0) {
-
-        fichas.style.transition = "none";
-        indice = 20;
-        alterarPosicao();
+        fichas.style.transform = `translateX(${-69.5 * indice}rem)`;
     }
 
-    setTimeout(() => {
-        
-        indice -= 1;
-        fichas.style.transition = "transform 0.4s ease";
+    avancar.addEventListener("click", () => {
+
+        indice += 1;
+        fichas.style.transition = "transform 0.400s ease";
         alterarPosicao();
 
-    }, 10);
-})
+        if(indice === 20) {
+
+            setTimeout(() => {
+                
+                fichas.style.transition = "none";
+                indice = 0;
+                alterarPosicao();
+
+            }, 400);        
+        }
+    })
+
+    voltar.addEventListener("click", () => {
+
+
+        if(indice === 0) {
+
+            fichas.style.transition = "none";
+            indice = 20;
+            alterarPosicao();
+        }
+
+        setTimeout(() => {
+            
+            indice -= 1;
+            fichas.style.transition = "transform 0.4s ease";
+            alterarPosicao();
+
+        }, 10);
+    })
+}
 
 /*ALTERAÇÕES COM O JOHN*/

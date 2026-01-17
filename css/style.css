@@ -612,13 +612,19 @@ footer img {
 
     font-family: 'diphylleia';
     font-size: 2rem;
+    margin-left: 9.7rem;
+
+    color: var(--color-blue-primary);
+}
+
+.subtopico2 {
+
+    font-family: 'diphylleia';
+    font-size: 2rem;
 
     margin-bottom: 1rem;
-    margin-left: 2rem;
-
-    justify-content: left;
-
-    color: var(--color-secondary);
+    margin-left: 3.7rem;
+    color: var(--color-blue-primary);
 }
 
 .carrossel {
@@ -1178,6 +1184,30 @@ footer img {
         align-items: start;
         justify-content: center;
     }
+
+    /*ALTERAÇÕES COM O JOHN*/
+
+    .subtopico {
+
+        font-size: 1.5rem;
+        margin-left: 0rem;
+    }
+
+    .subtopico2 {
+
+        font-size: 1.5rem;
+    }
+
+    .janela {
+        width: 40rem;
+    }
+
+    .cartao {
+
+        width: 40rem;
+    }
+
+    /*ALTERAÇÕES COM O JOHN*/
     
     .card_torcicolo {
         display: flex;
