@@ -193,94 +193,46 @@ let indice = 0
 let avancar = document.getElementById("avancar");
 let voltar = document.getElementById("voltar");
 
-if(window.innerWidth <= 800) {
+function alterarPosicao() {
 
-    function alterarPosicao() {
+    fichas.style.transform = `translateX(${-69.5 * indice}rem)`;
+}
 
-        fichas.style.transform = `translateX(${-40 * indice}rem)`;
-    }
+avancar.addEventListener("click", () => {
 
-    avancar.addEventListener("click", () => {
+    indice += 1;
+    fichas.style.transition = "transform 0.400s ease";
+    alterarPosicao();
 
-        indice += 1;
-        fichas.style.transition = "transform 0.400s ease";
-        alterarPosicao();
-
-        if(indice === 20) {
-
-            setTimeout(() => {
-                
-                fichas.style.transition = "none";
-                indice = 0;
-                alterarPosicao();
-
-            }, 400);        
-        }
-    })
-
-    voltar.addEventListener("click", () => {
-
-
-        if(indice === 0) {
-
-            fichas.style.transition = "none";
-            indice = 20;
-            alterarPosicao();
-        }
+    if(indice === 20) {
 
         setTimeout(() => {
             
-            indice -= 1;
-            fichas.style.transition = "transform 0.4s ease";
+            fichas.style.transition = "none";
+            indice = 0;
             alterarPosicao();
 
-        }, 10);
-    })
-}
+        }, 400);        
+    }
+})
 
-else {
+voltar.addEventListener("click", () => {
 
-    function alterarPosicao() {
 
-        fichas.style.transform = `translateX(${-69.5 * indice}rem)`;
+    if(indice === 0) {
+
+        fichas.style.transition = "none";
+        indice = 20;
+        alterarPosicao();
     }
 
-    avancar.addEventListener("click", () => {
-
-        indice += 1;
-        fichas.style.transition = "transform 0.400s ease";
+    setTimeout(() => {
+        
+        indice -= 1;
+        fichas.style.transition = "transform 0.4s ease";
         alterarPosicao();
 
-        if(indice === 20) {
-
-            setTimeout(() => {
-                
-                fichas.style.transition = "none";
-                indice = 0;
-                alterarPosicao();
-
-            }, 400);        
-        }
-    })
-
-    voltar.addEventListener("click", () => {
-
-
-        if(indice === 0) {
-
-            fichas.style.transition = "none";
-            indice = 20;
-            alterarPosicao();
-        }
-
-        setTimeout(() => {
-            
-            indice -= 1;
-            fichas.style.transition = "transform 0.4s ease";
-            alterarPosicao();
-
-        }, 10);
-    })
-}
+    }, 10);
+})
 
 /*ALTERAÇÕES COM O JOHN*/
