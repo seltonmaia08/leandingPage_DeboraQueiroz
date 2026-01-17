@@ -1185,11 +1185,30 @@ footer img {
         justify-content: center;
     }
 
-    /*ALTERAÇÕES COM O JOHN*/
+    /*ALTERAÇÕES COM O JOHN
 
-    
+    .subtopico {
 
-    /*ALTERAÇÕES COM O JOHN*/
+        font-size: 1.5rem;
+        margin-left: 0rem;
+    }
+
+    .subtopico2 {
+
+        font-size: 1.5rem;
+    }
+
+    .janela {
+        width: 40rem;
+    }
+
+    .cartao {
+
+        width: 40rem;
+        align-items: center;
+    }
+
+    ALTERAÇÕES COM O JOHN*/
     
     .card_torcicolo {
         display: flex;
