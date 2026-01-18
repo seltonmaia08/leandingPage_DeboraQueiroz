@@ -117,7 +117,7 @@ linkACloseMenu.forEach(link_a => {
 
 })
 
-/*ALTERAÇÕES COM O JOHN
+/*ALTERAÇÕES COM O JOHN*/
 
 async function requisicao_fichas() {
 
@@ -186,57 +186,14 @@ function cartoes(dados) {
     fichas.appendChild(clone);
 }
 
-DESLOCAMENTO DO CARROSSEL
+/*DESLOCAMENTO DO CARROSSEL*/
 
 let indice = 0
 
 let avancar = document.getElementById("avancar");
 let voltar = document.getElementById("voltar");
 
-function alterarPosicao() {
-
-    fichas.style.transform = `translateX(${-69.5 * indice}rem)`;
-}
-
-avancar.addEventListener("click", () => {
-
-    indice += 1;
-    fichas.style.transition = "transform 0.400s ease";
-    alterarPosicao();
-
-    if(indice === 20) {
-
-        setTimeout(() => {
-            
-            fichas.style.transition = "none";
-            indice = 0;
-            alterarPosicao();
-
-        }, 400);        
-    }
-})
-
-voltar.addEventListener("click", () => {
-
-
-    if(indice === 0) {
-
-        fichas.style.transition = "none";
-        indice = 20;
-        alterarPosicao();
-    }
-
-    setTimeout(() => {
-        
-        indice -= 1;
-        fichas.style.transition = "transform 0.4s ease";
-        alterarPosicao();
-
-    }, 10);
-})
-
-
-/*RESPONSIVIDADE
+/*RESPONSIVIDADE*/
 
 if(window.innerWidth <= 800) {
 
