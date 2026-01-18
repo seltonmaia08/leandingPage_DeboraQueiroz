@@ -1185,7 +1185,7 @@ footer img {
         justify-content: center;
     }
 
-    /*ALTERAÇÕES COM O JOHN
+    /*ALTERAÇÕES COM O JOHN*/
 
     .subtopico {
 
@@ -1198,7 +1198,7 @@ footer img {
         font-size: 1.5rem;
     }
 
-    .janela {
+    /*.janela {
         width: 40rem;
     }
 
@@ -1275,8 +1275,6 @@ footer img {
         justify-content: center;
     }
 
-    
-
     .atendimento {
         display: flex;
         flex-direction: column;
@@ -1302,6 +1300,12 @@ footer img {
         z-index: 10;
     }
 
+    #contatos {
+
+        display: flex;
+        flex-direction: column;
+    }
+
     .footer-logo {
         max-width: 800px;
         width: 100%;
@@ -1321,10 +1325,8 @@ footer img {
     }
 
     .outros {
-        max-width: 800px;
         width: 100%;
     }
-
 
     .outros p{
         width: 90%;
