@@ -1300,12 +1300,6 @@ footer img {
         z-index: 10;
     }
 
-    #contatos {
-
-        display: flex;
-        flex-direction: column;
-    }
-
     .footer-logo {
         max-width: 800px;
         width: 100%;
@@ -1325,6 +1319,7 @@ footer img {
     }
 
     .outros {
+        max-width: 800px;
         width: 100%;
     }
 
