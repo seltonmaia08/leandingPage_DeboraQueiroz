@@ -635,7 +635,7 @@ footer img {
     font-size: 2rem;
 
     margin-bottom: 1rem;
-    margin-left: 3.7rem;
+    margin-left: 25.8rem;
     color: var(--color-blue-primary);
 }
 
@@ -1191,6 +1191,7 @@ footer img {
     .subtopico2 {
 
         font-size: 1.5rem;
+        margin-left: 13rem;
     }
 
     .janela {
@@ -1223,6 +1224,11 @@ footer img {
         display: flex;
         flex-wrap: nowrap;
         text-align: justify;
+    }
+
+    .cartao_imagem {
+
+        width: 12rem;
     }
 
     /*ALTERAÇÕES COM O JOHN*/

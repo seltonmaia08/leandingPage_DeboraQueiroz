@@ -188,100 +188,48 @@ function cartoes(dados) {
 
 /*DESLOCAMENTO DO CARROSSEL*/
 
-let indice = 0
+let indice = 0;
 
 let avancar = document.getElementById("avancar");
 let voltar = document.getElementById("voltar");
 
-/*RESPONSIVIDADE*/
-
-if(window.innerWidth <= 800) {
-
-    function alterarPosicao() {
-
-        fichas.style.transform = `translateX(${-40 * indice}rem)`;
-    }
-
-    avancar.addEventListener("click", () => {
-
-        indice += 1;
-        fichas.style.transition = "transform 0.400s ease";
-        alterarPosicao();
-
-        if(indice === 20) {
-
-            setTimeout(() => {
-                
-                fichas.style.transition = "none";
-                indice = 0;
-                alterarPosicao();
-
-            }, 400);        
-        }
-    })
-
-    voltar.addEventListener("click", () => {
-
-
-        if(indice === 0) {
-
-            fichas.style.transition = "none";
-            indice = 20;
-            alterarPosicao();
-        }
-
-        setTimeout(() => {
-            
-            indice -= 1;
-            fichas.style.transition = "transform 0.4s ease";
-            alterarPosicao();
-
-        }, 10);
-    })
+function alterarPosicao() {
+    const largura = document.querySelector(".janela").offsetWidth;
+    fichas.style.transform = `translateX(${-largura * indice}px)`;
 }
 
-else {
+avancar.addEventListener("click", () => {
 
-    function alterarPosicao() {
+    const total = fichas.children.length - 1;
 
-        fichas.style.transform = `translateX(${-69.5 * indice}rem)`;
+    indice += 1;
+    fichas.style.transition = "transform 0.4s ease";
+    alterarPosicao();
+
+    if (indice === total) {
+        setTimeout(() => {
+            fichas.style.transition = "none";
+            indice = 0;
+            alterarPosicao();
+        }, 400);
+    }
+});
+
+voltar.addEventListener("click", () => {
+
+    const total = fichas.children.length - 1;
+
+    if (indice === 0) {
+        fichas.style.transition = "none";
+        indice = total;
+        alterarPosicao();
     }
 
-    avancar.addEventListener("click", () => {
-
-        indice += 1;
-        fichas.style.transition = "transform 0.400s ease";
+    setTimeout(() => {
+        indice -= 1;
+        fichas.style.transition = "transform 0.4s ease";
         alterarPosicao();
+    }, 10);
+});
 
-        if(indice === 20) {
-
-            setTimeout(() => {
-                
-                fichas.style.transition = "none";
-                indice = 0;
-                alterarPosicao();
-
-            }, 400);     
-        }
-    })
-
-    voltar.addEventListener("click", () => {
-
-
-        if(indice === 0) {
-
-            fichas.style.transition = "none";
-            indice = 20;
-            alterarPosicao();
-        }
-
-        setTimeout(() => {
-            
-            indice -= 1;
-            fichas.style.transition = "transform 0.4s ease";
-            alterarPosicao();
-
-        }, 10);
-    })
-}
 /*ALTERAÇÕES COM O JOHN*/
