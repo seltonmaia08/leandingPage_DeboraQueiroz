@@ -105,7 +105,8 @@ body.alto-contraste footer,
 body.alto-contraste div,
 body.alto-contraste h1,
 body.alto-contraste h2,
-body.alto-contraste p {
+body.alto-contraste p,
+body.alto-contraste span {
     background-color: var(--color-black) !important;
     color: #FFFFFF !important;
     background-image: none !important;
@@ -148,7 +149,8 @@ body.alto-contraste .star,
 body.alto-contraste .instagram,
 body.alto-contraste .whatsapp,
 body.alto-contraste .email,
-body.alto-contraste .copyright {
+body.alto-contraste .copyright,
+body.alto-contraste .buttons_carrossel {
     color: var(--color-white);
 }
 
@@ -646,7 +648,7 @@ footer img {
     gap: 1rem;
 }
 
-#voltar i {
+.buttons_carrossel {
 
     background: transparent;
     font-size: 2rem;
@@ -659,26 +661,7 @@ footer img {
     border-radius: 0.5rem;
 }
 
-#voltar i:hover {
-
-    background: var(--color-blue-light);
-    border-radius: 0.5rem;
-}
-
-#avancar i {
- 
-    background: transparent;
-    font-size: 2rem;
-    padding: 0.3rem;
-    padding-left: 0.4rem;
-
-    color: var(--color-blue-primary);
-    transition: background 0.5s;
-
-    border-radius: 0.5rem;
-}
-
-#avancar i:hover {
+.buttons_carrossel:hover {
 
     background: var(--color-blue-light);
     border-radius: 0.5rem;
@@ -1212,15 +1195,13 @@ footer img {
 
     .janela {
         max-width: 800px;
-        width: 40rem;
-        height: 31rem;
+        width: 600px;
     }
 
     .cartao {
 
         max-width: 800px;
-        width: 40rem;
-        height: 31rem;
+        width: 600px;
         align-items: center;
 
         display: flex;
@@ -1230,7 +1211,6 @@ footer img {
 
     .info_cartao {
 
-        width: 80%;
         display: flex;
         flex-direction: column;
 
@@ -1301,7 +1281,7 @@ footer img {
     }
     .video-full {
         width: 100%;         
-        height: 20vh;
+        height: 30vh;
     }
 
     .card-container_esp,
@@ -1388,13 +1368,13 @@ footer img {
 }
 
 
-@media (min-width: 2000px) {
+/*@media (min-width: 2000px) {
     .video-full {
         max-width: 2000px;
         margin: 0 auto;
     }
 
-}
+}*/
 
 .indicador-leitura {
     color: var(--color-black);
