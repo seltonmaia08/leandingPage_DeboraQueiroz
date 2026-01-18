@@ -117,7 +117,7 @@ linkACloseMenu.forEach(link_a => {
 
 })
 
-/*ALTERAÇÕES COM O JOHN*/
+/*ALTERAÇÕES COM O JOHN
 
 async function requisicao_fichas() {
 
@@ -186,7 +186,7 @@ function cartoes(dados) {
     fichas.appendChild(clone);
 }
 
-/*DESLOCAMENTO DO CARROSSEL*/
+DESLOCAMENTO DO CARROSSEL
 
 let indice = 0
 
