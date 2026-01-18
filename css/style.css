@@ -608,6 +608,16 @@ footer img {
 
 /*ALTERAÇÕES COM O JOHN*/
 
+#cartoesPai {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
 .subtopico {
 
     font-family: 'diphylleia';
@@ -675,13 +685,12 @@ footer img {
 }
 
 .janela {
-    width: 69.5rem;
+    width: 69.5rem; /*69.5rem*/
     overflow: hidden;
 }
 
 .sec_cartao {
 
-    font-size: 0.9rem;
     font-size: 0.9rem;
     width: 100%;
 
@@ -1202,13 +1211,38 @@ footer img {
     }
 
     .janela {
+        max-width: 800px;
         width: 40rem;
+        height: 31rem;
     }
 
     .cartao {
 
+        max-width: 800px;
         width: 40rem;
+        height: 31rem;
         align-items: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .info_cartao {
+
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .cartao_observacao {
+
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: nowrap;
+        text-align: justify;
     }
 
     /*ALTERAÇÕES COM O JOHN*/

@@ -261,7 +261,7 @@ else {
                 indice = 0;
                 alterarPosicao();
 
-            }, 400);        
+            }, 400);     
         }
     })
 
