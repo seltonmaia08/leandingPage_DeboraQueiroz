@@ -203,14 +203,18 @@ avancar.addEventListener("click", () => {
     const total = fichas.children.length - 1;
 
     indice += 1;
+    indiceAtual = indice;
     fichas.style.transition = "transform 0.4s ease";
     alterarPosicao();
+    atualizarIndicador();
 
     if (indice === total) {
         setTimeout(() => {
             fichas.style.transition = "none";
             indice = 0;
+            indiceAtual = 0;
             alterarPosicao();
+            atualizarIndicador();
         }, 400);
     }
 });
@@ -222,14 +226,65 @@ voltar.addEventListener("click", () => {
     if (indice === 0) {
         fichas.style.transition = "none";
         indice = total;
+        indiceAtual = total - 1;
         alterarPosicao();
+        atualizarIndicador();
+
     }
 
     setTimeout(() => {
         indice -= 1;
+        indiceAtual = indice;
         fichas.style.transition = "transform 0.4s ease";
         alterarPosicao();
+        atualizarIndicador();
     }, 10);
 });
+
+//Barra de progresso
+let indiceAtual = 0;
+const totalCartões = 20;
+
+const barra = document.querySelector(".indicador-barra");
+
+function atualizarIndicador() {
+    const progresso = ((indiceAtual + 1) / totalCartões) * 100;
+    barra.style.width = `${progresso}%`;
+}
+
+//TENTATIVA DE TROCAR CARTÕES COM O DEDO
+const trilho = document.getElementById("fichas");
+const btnAvancar = document.getElementById("avancar");
+const btnVoltar = document.getElementById("voltar");
+
+let toqueInicio = 0;
+let toqueFim = 0;
+
+//marca o inicio do toque
+trilho.addEventListener("touchstart", (e) =>{
+    toqueInicio = e.changedTouches[0].screenX;
+}, {passive: true}); //isso possibilita que o scroll continue funcionando
+
+//marca o fim do toque
+trilho.addEventListener("touchend", (e) =>{
+    toqueFim = e.changedTouches[0].screenX;
+    passar();
+}, {passive: true});
+
+//funçao para passar os cards
+function passar(){
+    const distancia = toqueFim - toqueInicio;
+    const sensibilidade = 50; //controla a sensi. Para diferenciar toque de "arrastão"
+
+    if(distancia > sensibilidade){
+        btnVoltar.click();
+    }
+
+    if(distancia < -sensibilidade){
+        btnAvancar.click();
+    }
+
+}
+
 
 /*ALTERAÇÕES COM O JOHN*/
